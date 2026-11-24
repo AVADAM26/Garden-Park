@@ -130,7 +130,7 @@ p { margin: 0 0 1.1em; }
 
 /* ---------- Faktenleiste ---------- */
 .facts { background: var(--surface); border-bottom: 1px solid var(--line); }
-.facts-list { list-style: none; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; padding-block: 22px; }
+.facts-list { list-style: none; margin: 0 auto; display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; padding-block: 22px; }
 .facts-list li { padding: 6px 10px; border-left: 1px solid var(--line); line-height: 1.35; }
 .facts-list li:first-child { border-left: 0; }
 .facts-list strong { display: block; font-weight: 600; font-size: 1.02rem; }
@@ -210,6 +210,37 @@ p { margin: 0 0 1.1em; }
 .quote.placeholder { box-shadow: none; border: 2px dashed var(--line); background: transparent; color: var(--muted); }
 .review-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
+/* Bewertungen im Stil von Butterfly */
+.score { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; padding: 18px 0 30px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+.score-big { font-size: 3.4rem; font-weight: 300; line-height: 1; margin: 0 0 8px; }
+.score-big span { font-size: 1.2rem; color: var(--muted); margin-left: 8px; }
+.score-sub { margin: 0; color: var(--muted); font-size: .95rem; }
+.score-bars { margin: 0; display: grid; gap: 8px; min-width: min(300px, 100%); font-size: .9rem; }
+.score-bars div { display: grid; grid-template-columns: 100px 1fr; align-items: center; gap: 12px; }
+.score-bars dt { color: var(--muted); }
+.score-bars dd { margin: 0; display: flex; align-items: center; gap: 12px; }
+.score-bars dd span { flex: 1; height: 4px; border-radius: 4px; background: linear-gradient(90deg, var(--green-brand) var(--v), var(--line) var(--v)); }
+.quotes { grid-template-columns: repeat(4, 1fr); max-width: none; }
+.quote { box-shadow: none; border: 1px solid var(--line); padding: 24px; }
+.quote blockquote { font-style: normal; font-size: 1.02rem; }
+.quote figcaption { text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; }
+
+/* Auszeichnungen und Green */
+.creds { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 26px 32px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+.cred { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; }
+.cred svg { width: 46px; height: 46px; flex: none; color: var(--green); }
+.cred img { height: 56px; width: auto; flex: none; border-radius: 6px; }
+.cred-t { display: block; font-weight: 600; }
+.cred-d { display: block; color: var(--muted); font-size: .9rem; line-height: 1.45; }
+a.cred:hover .cred-t { color: var(--green); }
+
+/* Social-Icons */
+.social-btn { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 8px; background: var(--green); color: #fff; transition: background .15s, transform .15s; }
+.social-btn:hover { background: var(--green-hover); color: #fff; transform: translateY(-1px); }
+.social-btn svg { width: 20px; height: 20px; }
+.social-footer .social-btn { background: #8db33a; }
+.licence { font-size: .8rem; opacity: .8; margin: 14px 0 0; }
+
 /* Explore-Band */
 .band { position: relative; color: #fff; padding-block: clamp(80px, 12vw, 160px); }
 .band-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -233,10 +264,10 @@ p { margin: 0 0 1.1em; }
 .gallery img:nth-child(6) { grid-column: span 2; }
 
 /* Gastgeber */
-.social { display: flex; gap: 18px; flex-wrap: wrap; font-weight: 600; }
+.social { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; }
 
 /* Direkt buchen */
-.book { background: linear-gradient(135deg, #3b4a17, #2b2b2b); color: #fff; }
+.book { margin-top: 56px; text-align: center; background: linear-gradient(135deg, #3b4a17, #2b2b2b); color: #fff; border-radius: var(--radius); padding: clamp(32px, 5vw, 56px) 24px; }
 .book h2 { font-weight: 300; }
 
 /* Kontakt */
@@ -282,14 +313,16 @@ address { font-style: normal; margin-bottom: 1em; font-size: 1.05rem; }
   .main-nav.open { display: flex; }
   .main-nav a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
   .header-actions { margin-left: auto; }
-  .facts-list { grid-template-columns: repeat(3, 1fr); row-gap: 14px; }
-  .facts-list li:nth-child(4) { border-left: 0; }
-  .rooms-grid, .gtk-grid { grid-template-columns: repeat(2, 1fr); }
+  .facts-list { row-gap: 14px; }
+  .rooms-grid, .gtk-grid, .quotes { grid-template-columns: repeat(2, 1fr); }
+  .facts-list { grid-template-columns: repeat(4, 1fr); }
+  .facts-list li:nth-child(5) { border-left: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 760px) {
   body { font-size: 1rem; }
   .split, .contact-grid, .quotes, .offers-grid { grid-template-columns: 1fr; }
+  .facts-list li:last-child { grid-column: 1 / -1; }
   .split-reverse .split-media { order: 0; }
   .ticks { grid-template-columns: 1fr; }
   .rooms-grid, .gtk-grid { grid-template-columns: 1fr; }

@@ -64,6 +64,14 @@
     });
   }
 
+  // Buchungsknopf oben: Daten im Link immer auf heute und morgen setzen
+  document.querySelectorAll('[data-direct-booking]').forEach(function (a) {
+    function iso(d) { return d.toISOString().slice(0, 10); }
+    var d1 = new Date(), d2 = new Date(Date.now() + 864e5);
+    a.href = a.href.replace(/%22checkInDate%22:%22[0-9-]+%22/, '%22checkInDate%22:%22' + iso(d1) + '%22')
+                   .replace(/%22checkOutDate%22:%22[0-9-]+%22/, '%22checkOutDate%22:%22' + iso(d2) + '%22');
+  });
+
   // Video erst beim Klick laden (schneller, keine YouTube-Cookies vorher)
   document.querySelectorAll('.video-facade').forEach(function (btn) {
     btn.addEventListener('click', function () {
