@@ -191,6 +191,10 @@ p { margin: 0 0 1.1em; }
 .mosaic img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; height: 100%; object-fit: cover; }
 .mosaic .m1 { grid-column: 1 / 3; aspect-ratio: 16 / 10; }
 .mosaic .m2, .mosaic .m3 { aspect-ratio: 1; }
+.mosaic-two { grid-template-columns: 1fr 1fr; }
+.mosaic-two img { aspect-ratio: 3 / 4; }
+.mosaic-two img:nth-child(2) { margin-top: 48px; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Angebote */
 .offers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
