@@ -1,0 +1,57 @@
+# Garden Park Guest House · Projektbeschreibung für Claude
+
+Diese Datei lesen, bevor am Projekt gearbeitet wird.
+
+## Worum es geht
+
+Neubau der Webseite www.garden-park.co.uk des Garden Park Guest House in Grantown-on-Spey (Cairngorms National Park), geführt von Sarah und Daniel Muccio. Projekt von November 2026 bis Februar 2027, live zum Saisonstart 2027. Umsetzung: Daniel Muccio für AVADAM, Adi (Adrian von Arb) hilft vor allem bei den Fotos. Änderungen nur in Absprache mit Daniel.
+
+Status: **Entwurf.** Für Suchmaschinen gesperrt (`robots.txt` und `noindex`). Erst beim echten Start entfernen.
+
+## Grundlagen (auf Daniels Laptop, E:\Claude\Projekte\Garden Park Guest House Web Page 2027)
+
+- `Garden Park Web Page 2027.md`: Stand, Entscheide, Hosting, Widersprüche.
+- `Seitenplan.md`: alle Seiten, Reihenfolge der Startseite, Zimmer-Fakten, Links.
+- `Web_page_rewording_the_text.docx`: neueste Textfassung, Grundlage für alle Texte.
+- `garden_park_homepage_seo_implementation_brief.docx`: SEO-Brief (H1–H3, interne Links, strukturierte Daten). Achtung: „Open all year“, „Four-poster“ und „selected days“ darin stimmen nicht.
+- Brand: E:\Claude\Garden Park Branding (Grün #B0CB1F, Gold-Verlauf, Logo weiss).
+
+## Stil
+
+Der heutige Look von garden-park.co.uk gefällt Daniel und bleibt: dunkle Menüleiste, goldenes Schrift-Logo, grüne Knöpfe, grosse Fotos, Zimmerkarten mit Schatten. Er wird poliert und für 2026–2035 fit gemacht: mehr Luft, grössere ruhige Schrift, kein Text auf unruhigen Fotos, Fakten statt nur Icons. Die Butterfly-Cottage-Seite (butterfly-cottage.co.uk) ist der technische Bauplan.
+
+Pflicht in jedem Projekt: Hell/Dunkel-Modus, Back-to-Top mit eigenem, überraschendem Motiv (Daniels Markenzeichen), PageSpeed auf Maximum, Footer „Website by AVADAM“ mit Link auf https://avadam26.github.io/avadam/.
+
+## Technik
+
+Reines HTML, CSS und JavaScript, kein PHP, kein WordPress. Packages, Angebote und News pflegen Sarah und Daniel später selber über ein Redaktionsfenster; daraus wird fertiges HTML gebaut (für Google und KIs lesbar, nichts per JavaScript nachladen). Hosting bei twofentons (Katie, Darren), eigenes Control Panel angefragt.
+
+Bestehende Adressen bleiben: `/`, `/de/`, `/grantown-map/`, `/privacy-policy/`, `/cookie-policy/`. Die Karte auf Butterfly (`/grantown/grantown-map.html`) nie ändern, sie steht als QR-Code im Cairngorms-Guide.
+
+Messen von Anfang an: Google Analytics, Cookie-Banner (Termageddon, Consent Mode v2), Trichter Webseite → Karte → Buchung.
+
+## Fakten (nichts davon ändern ohne Daniel)
+
+- Adresse: Garden Park, 2 Woodside Avenue, Grantown-on-Spey, PH26 3JN. Telefon +44 1479 873235. Mail relax@garden-park.co.uk.
+- Geschlossen November bis Februar, ausser zwischen Weihnachten und Neujahr. Nie „Open all year“ schreiben.
+- Zimmer: MacDonald (Superior, Super-King-Size, einziges Zimmer mit Badewanne mit Dusche), Grant (Deluxe, King-Size, 1,8 m Dusche mit Regendusche und Handbrause), Fraser und Sutherland (Doppelbett), Mathieson und MacKay (Twin, auf Deutsch immer „Zweibettzimmer mit zwei Einzelbetten“). Erdgeschoss: Sutherland (Walk-in-Dusche mit Regendusche und Handbrause) und Mathieson (Dusche mit 15 cm Absatz). Alle anderen Obergeschoss, mit Dusche. Einzelbelegung in jedem Zimmer möglich.
+- Keine festen Preise auf der Seite, Preise nur im Buchungskalender.
+- Butterfly Cottage: Selbstverpflegung für 2 Erwachsene plus bis 2 Kinder bis 10 Jahre oder 1 Kind bis 12 Jahre, Doppelbett erhöht mit Platz für Gepäck darunter, Walk-in-Dusche, einzige Unterkunft für Hunde. Eigene Seite butterfly-cottage.co.uk.
+- Nicht rollstuhlgängig, mit Gehhilfe machbar.
+- Grantown ist die „Capital of Strathspey“, „capital of the Cairngorms“ nur als früherer Beiname.
+
+## Links
+
+Instagram https://www.instagram.com/gardenpark1868 · Facebook https://www.facebook.com/GardenParkGuestHouse/ · YouTube https://www.youtube.com/@scotlandbydan · TripAdvisor https://www.tripadvisor.co.uk/Hotel_Review-g190790-d1749566-Reviews-Garden_Park_Guest_House-Grantown_on_Spey_Aviemore_and_the_Cairngorms_Scottish_Highland.html · Booking.com https://www.booking.com/Share-k75dkx · Google https://share.google/eFxh1GessZjSeQAQ1
+
+## Regeln
+
+- **Nichts erfinden.** Keine Preise, Angaben oder Bewertungen, die nicht von Daniel oder Sarah kommen. Fehlendes als Platzhalter in eckigen Klammern.
+- **Texte:** bestehende Texte übernehmen und nur glätten, nicht neu erfinden, kein Werbe-Englisch. Britisches Englisch. „Guest/Guests“ bewusst gross. Deutsch in Schweizer Schreibweise, immer „ss“, nie „ß“.
+- Jede Änderung auf dem Handy und am Computer, hell und dunkel prüfen. Nichts darf seitlich überstehen.
+- Vor dem Arbeiten `git pull`, kleine Commits mit deutscher Beschreibung.
+- **Commits immer im Namen der Person, die gerade arbeitet**, nie nur als „claude“. Vor dem ersten Commit `git config user.name` und `git config user.email` im Repo setzen. Ist unklar, wer arbeitet, kurz fragen.
+  - Dani: `scotlandbydan` mit `317312833+dmuccios24-oss@users.noreply.github.com`, nie mit seiner Gmail-Adresse, sonst blockt GitHub den Push.
+  - Adi: `f5yct67kcv-source` mit `284693819+f5yct67kcv-source@users.noreply.github.com`.
+- **Arbeit am Ende jeder Sitzung in `main` zurückführen.** Cloud-Sitzungen arbeiten auf einem Zweig `claude/…`: vor Sitzungsende `git pull origin main`, Konflikte lösen, in `main` übernehmen und hochladen. Nur wenn Adi oder Dani ausdrücklich zuerst prüfen wollen, stattdessen einen Pull Request.
+- Doku als Absicherung: nach grösseren Schritten die Projekt-Doku in Daniels Obsidian unter „Projekte“ und auf E:\Claude\Projekte\Garden Park Guest House Web Page 2027 nachführen.
