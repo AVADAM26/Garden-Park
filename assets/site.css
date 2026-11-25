@@ -200,13 +200,16 @@ p { margin: 0 0 1.1em; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Angebote */
-.offers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.offers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .offer-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 28px; }
 .offer-date { color: var(--green-brand); font-weight: 600; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
 .offer-card { display: flex; flex-direction: column; align-items: flex-start; }
 .offer-card h3 { font-size: 1.5rem; font-weight: 400; }
 .offer-card > :last-child { margin-top: auto; }
-.offer-feature { border-color: var(--gold-2); background: rgba(212, 178, 87, .1); }
+.offer-feature { border-color: var(--gold-2); background: rgba(212, 178, 87, .1); grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.1fr; gap: 0; padding: 0; overflow: hidden; }
+.offer-img { width: 100%; height: 100%; object-fit: cover; }
+.offer-body { padding: 32px; display: flex; flex-direction: column; align-items: flex-start; }
+.offer-body > :last-child { margin-top: auto; }
 .offer-feature .offer-date { color: var(--gold-1); }
 
 /* Bewertungen */
@@ -327,6 +330,8 @@ address { font-style: normal; margin-bottom: 1em; font-size: 1.05rem; }
   .facts-list { row-gap: 14px; }
   .rooms-grid, .gtk-grid, .quotes { grid-template-columns: repeat(2, 1fr); }
   .offers-grid { grid-template-columns: 1fr; }
+  .offer-feature { grid-template-columns: 1fr; }
+  .offer-img { aspect-ratio: 16 / 9; height: auto; }
   .facts-list { grid-template-columns: repeat(4, 1fr); }
   .facts-list li:nth-child(5) { border-left: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
