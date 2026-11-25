@@ -39,6 +39,15 @@ def translatable(s):
     return bool(s) and re.search(r'[A-Za-zÀ-ÿ]', s) is not None
 
 
+FLAGS = {  # kleine SVG-Fahnen (Emoji-Fahnen zeigt Windows nicht an)
+    'en': '<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><path d="M0 0h60v30H0z" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30M60 0L0 30" stroke="#C8102E" stroke-width="2"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg>',
+    'de': '<svg class="flag" viewBox="0 0 5 3" aria-hidden="true"><path d="M0 0h5v1H0z" fill="#000"/><path d="M0 1h5v1H0z" fill="#D00"/><path d="M0 2h5v1H0z" fill="#FFCE00"/></svg>',
+    'it': '<svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><path d="M0 0h1v2H0z" fill="#009246"/><path d="M1 0h1v2H1z" fill="#fff"/><path d="M2 0h1v2H2z" fill="#CE2B37"/></svg>',
+    'nl': '<svg class="flag" viewBox="0 0 9 6" aria-hidden="true"><path d="M0 0h9v2H0z" fill="#AE1C28"/><path d="M0 2h9v2H0z" fill="#fff"/><path d="M0 4h9v2H0z" fill="#21468B"/></svg>',
+    'fr': '<svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><path d="M0 0h1v2H0z" fill="#002395"/><path d="M1 0h1v2H1z" fill="#fff"/><path d="M2 0h1v2H2z" fill="#ED2939"/></svg>',
+}
+
+
 def lang_block(cur):
     out = []
     for code, (_, name, _) in LANGS.items():
@@ -48,10 +57,11 @@ def lang_block(cur):
             href = '../' if code == 'en' else f'../{code}/'
         href = href or './'
         attr = ' aria-current="true"' if code == cur else ''
-        out.append(f'<a href="{href}" hreflang="{code}" lang="{code}"{attr}>{code.upper()}</a>')
+        out.append(f'<a href="{href}" hreflang="{code}" lang="{code}"{attr}>{FLAGS[code]}<span>{name}</span></a>')
     label = {'en': 'Language', 'de': 'Sprache', 'it': 'Lingua', 'nl': 'Taal', 'fr': 'Langue'}[cur]
-    return ('<!--lang-start--><span class="nav-lang" role="group" aria-label="' + label + '">'
-            + ''.join(out) + '</span><!--lang-end-->')
+    return ('<!--lang-start--><details class="nav-lang"><summary aria-label="' + label + ': ' + LANGS[cur][1] + '">'
+            + FLAGS[cur] + '<span>' + cur.upper() + '</span><svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></summary>'
+            + '<div class="lang-menu">' + ''.join(out) + '</div></details><!--lang-end-->')
 
 
 def head_links(cur):
@@ -124,13 +134,14 @@ def main():
     src = re.sub(r'<!--head-start-->.*?<!--head-end-->', lambda m: head_links('en'), src, flags=re.S)
     SRC.write_text(src, encoding='utf-8')
 
-    keys = collect(src)
+    keys = collect(re.sub(r'<!--lang-start-->.*?<!--lang-end-->', '', src, flags=re.S))  # Sprachwahl baut lang_block selber
     I18N.mkdir(exist_ok=True)
     (I18N / '_en.json').write_text(json.dumps(keys, ensure_ascii=False, indent=1), encoding='utf-8')
     if '--keys' in sys.argv:
         print(len(keys), 'Texte in i18n/_en.json')
         return
     keep = set(json.loads((I18N / '_keep.json').read_text(encoding='utf-8')))
+    keep |= {norm(k) for k in collect(lang_block('en'))} | {v[1] for v in LANGS.values()}  # wird pro Sprache neu gebaut
 
     for code in LANGS:
         if code == 'en':

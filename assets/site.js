@@ -154,3 +154,10 @@ document.querySelectorAll('.m-toggle').forEach(function (btn) {
     if (!open) { var sec = btn.closest('section'); if (sec && sec.getBoundingClientRect().top < 0) sec.scrollIntoView({ block: 'start' }); }
   });
 });
+
+// Sprachwahl: schliessen bei Klick daneben oder Escape
+(function () {
+  var d = document.querySelector('.nav-lang'); if (!d) return;
+  document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+})();
