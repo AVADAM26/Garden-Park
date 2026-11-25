@@ -20,7 +20,7 @@ Status: **Entwurf.** Für Suchmaschinen gesperrt (`robots.txt` und `noindex`). E
 
 Der heutige Look von garden-park.co.uk gefällt Daniel und bleibt: dunkle Menüleiste, goldenes Schrift-Logo, grüne Knöpfe, grosse Fotos, Zimmerkarten mit Schatten. Er wird poliert und für 2026–2035 fit gemacht: mehr Luft, grössere ruhige Schrift, kein Text auf unruhigen Fotos, Fakten statt nur Icons. Die Butterfly-Cottage-Seite (butterfly-cottage.co.uk) ist der technische Bauplan.
 
-Pflicht in jedem Projekt: Hell/Dunkel-Modus, Back-to-Top mit eigenem, überraschendem Motiv (Daniels Markenzeichen), PageSpeed auf Maximum, Footer „Website by AVADAM“ mit Link auf https://avadam26.github.io/avadam/.
+Pflicht in jedem Projekt: Hell/Dunkel-Modus, Geschwindigkeit immer mit Google PageSpeed Insights (pagespeed.web.dev) prüfen bzw. vor dem Start lokal mit Lighthouse (gleiche Messung, Handy und Computer), keine teuren CSS-Filter wie grosse blur() auf Bildern (lieber vorberechnete Bilder), Back-to-Top mit eigenem, überraschendem Motiv (Daniels Markenzeichen), PageSpeed auf Maximum, Footer „Website by AVADAM“ mit Link auf https://avadam26.github.io/avadam/.
 
 ## Technik
 

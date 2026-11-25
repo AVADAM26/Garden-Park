@@ -15,8 +15,8 @@
   --text: #262624;
   --muted: #50545b;
   --line: #e3ded3;
-  --green: #6b8a1f;          /* Knöpfe: Brand-Grün, abgedunkelt für lesbare weisse Schrift */
-  --green-hover: #5a7518;
+  --green: #577217;          /* Knöpfe: Brand-Grün, abgedunkelt für lesbare weisse Schrift (Kontrast über 4.5) */
+  --green-hover: #4a6113;
   --green-brand: #b0cb1f;    /* Brand Identity 2019 */
   --gold-1: #f6e7a6; --gold-2: #d4b257; --gold-3: #9c7a26;
   --shadow: 0 10px 30px rgba(30, 28, 20, .08), 0 2px 6px rgba(30, 28, 20, .05);
@@ -70,8 +70,8 @@ p { margin: 0 0 1.1em; }
 .logo-gold {
   display: block; aspect-ratio: 1891 / 566;
   background: linear-gradient(170deg, var(--gold-1) 0%, var(--gold-2) 45%, var(--gold-3) 70%, var(--gold-2) 100%);
-  -webkit-mask: url("../img/logo-white-960.png") center / contain no-repeat;
-          mask: url("../img/logo-white-960.png") center / contain no-repeat;
+  -webkit-mask: url("../img/logo-white-960.webp") center / contain no-repeat;
+          mask: url("../img/logo-white-960.webp") center / contain no-repeat;
 }
 .logo-small { width: 128px; }
 .logo-hero { width: min(440px, 78vw); margin: 0 auto 12px; filter: drop-shadow(0 2px 10px rgba(0,0,0,.45)); }
@@ -116,7 +116,7 @@ p { margin: 0 0 1.1em; }
 /* ---------- Hero ---------- */
 .hero { position: relative; min-height: max(520px, calc(100svh - 110px)); display: grid; align-items: start; color: #fff; overflow: hidden; }
 .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
-.hero-bg { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover; filter: blur(28px) brightness(.55); }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
 .hero-img.framed { left: 50%; transform: translateX(-50%); -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%); }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,12,16,.7) 0%, rgba(10,12,16,.35) 26%, rgba(10,12,16,0) 42%); }
 .hero-content { position: relative; text-align: center; padding-block: clamp(28px, 5vh, 56px) 40px; }
@@ -433,7 +433,7 @@ h2.strong { font-weight: 500; }
 .btn-book { white-space: nowrap; }
 
 /* Logo im Kopf nur "Garden Park", etwas grösser */
-.logo-name { aspect-ratio: 960 / 287; -webkit-mask-image: url("../img/logo-gp-white-960.png"); mask-image: url("../img/logo-gp-white-960.png"); }
+.logo-name { aspect-ratio: 960 / 287; -webkit-mask-image: url("../img/logo-gp-white-960.webp"); mask-image: url("../img/logo-gp-white-960.webp"); }
 .logo-small.logo-name { width: 168px; }
 @media (max-width: 760px) { .logo-small.logo-name { width: 150px; } }
 
