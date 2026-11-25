@@ -505,3 +505,19 @@ h2.strong { font-weight: 500; }
   .nav-lang { margin-left: 18px; }
   .header-actions { gap: 16px; }
 }
+/* The area: Kachel mit Kartenvorschau neben dem Titel, gleiche Spalten wie die sechs Kacheln */
+.area-top { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: end; margin-bottom: 40px; }
+.area-top .section-head { grid-column: span 2; max-width: none; margin-bottom: 0; }
+.map-tile { display: flex; flex-direction: column; padding: 0; overflow: hidden; text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s; }
+.map-tile:hover { transform: translateY(-3px); }
+.map-tile img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; }
+.map-tile-body { display: flex; flex-direction: column; gap: 6px; padding: 18px 26px 20px; }
+.map-tile-title { font-size: 1.1rem; font-weight: 600; }
+.map-tile-text { font-size: .96rem; color: var(--muted); }
+.map-tile-link { font-size: .96rem; color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.map-tile-credit { font-size: .7rem; color: var(--muted); opacity: .8; margin-top: 4px; }
+@media (max-width: 1020px) {
+  .area-top { grid-template-columns: 1fr; }
+  .area-top .section-head { grid-column: auto; }
+  .map-tile { max-width: 520px; }
+}
