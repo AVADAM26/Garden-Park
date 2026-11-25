@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/hero-hosts-1600.webp" as="image" imagesrcset="../img/hero-hosts-800.webp 800w, ../img/hero-hosts-1600.webp 1600w, ../img/hero-hosts-2200.webp 2200w" imagesizes="100vw">
-<link rel="stylesheet" href="../assets/site.css?v=34">
+<link rel="stylesheet" href="../assets/site.css?v=35">
 <script>
   try { var t = localStorage.getItem('gp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -66,6 +66,78 @@
     "https://www.youtube.com/@scotlandbydan",
     "https://www.tripadvisor.co.uk/Hotel_Review-g190790-d1749566-Reviews-Garden_Park_Guest_House-Grantown_on_Spey_Aviemore_and_the_Cairngorms_Scottish_Highland.html"
   ]
+}
+</script>
+<script type="application/ld+json" id="faq-ld">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Pourquoi Grantown-on-Spey est-elle une si bonne base pour explorer les Highlands ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Grantown est située au centre de plusieurs régions. Les clients peuvent facilement faire des excursions en étoile vers Speyside, les Cairngorms, la côte de Moray, la région d'Inverness, Strathspey et Aberdeenshire. De nombreux sites sont accessibles en 20 à 50 minutes. Chaque jour peut offrir des paysages et des expériences complètement différents."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Peut-on aller à pied aux restaurants et aux commerces ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui. Garden Park se trouve dans une rue calme. Le centre-ville est à environ 2 minutes à pied. Tous les restaurants sont accessibles en 1 à 10 minutes de marche. Plusieurs sont à moins de 4 minutes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "À quelle distance se trouve Inverness de Grantown-on-Spey ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Environ 52 minutes en voiture, via Nairn ou via l'A9. Les transports en commun sont également disponibles — des bus réguliers relient Grantown-on-Spey et Inverness."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Proposez-vous des options de petit-déjeuner végétalien ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui. Des options végétariennes et végétaliennes fraîches sont disponibles tous les jours."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Peut-on faire le Speyside Malt Whisky Trail en une journée ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Bien sûr, on peut faire le Speyside Malt Whisky Trail en une journée. La vraie question est : vous en souviendrez-vous le lendemain ? 😄 Entre les nombreuses distilleries, centres d'accueil et dégustations, le temps file. Notre conseil : visitez moins de distilleries et profitez davantage de chacune. Daniel propose aussi, sur demande, un service de chauffeur pour un maximum de 4 personnes. Comme les dates se remplissent vite, surtout en haute saison, il est recommandé de réserver au moins 6 semaines à l'avance."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Voit-on vraiment des dauphins depuis la côte de Moray ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui, vraiment — et ils n'ont jamais fait payer l'entrée ! Le meilleur endroit est Chanonry Point près de Fortrose, où l'on aperçoit régulièrement des grands dauphins, surtout 1h30 à 2h après la marée basse. Apportez des jumelles et soyez patient — la récompense en vaut la peine."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Où trouver le site officiel du gouvernement pour demander l'ETA britannique ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pour éviter les sites frauduleux de tiers ou des frais de traitement inutiles, ne faites votre demande que via les canaux officiels du gouvernement britannique. Deux options : en ligne directement sur le site officiel gov.uk/eta/apply, ou via l'application officielle « UK ETA » (App Store et Google Play), qui permet de scanner facilement la puce biométrique de votre passeport et votre visage. Important : la demande officielle d'ETA coûte £20. Vérifiez toujours que l'adresse du site se termine exactement par .gov.uk — des sites indépendants ressemblent souvent aux pages officielles mais facturent d'importants frais cachés."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Où se trouve le meilleur whisky d'Écosse ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Qui sait ? Ce n'était pas très drôle, n'est-ce pas ? 😉 La vérité, c'est que personne ne peut répondre à cette question. L'Écosse compte plus de 140 distilleries et chacun a des goûts différents. Vous adorez peut-être un whisky insulaire tourbé, ou vous débutez tout juste dans le whisky. Dans ce cas, le Speyside est l'un des meilleurs endroits pour commencer. Pourquoi ne pas séjourner chez nous et explorer plus de 50 distilleries à travers le Speyside et le Strathspey ? Une merveilleuse aventure pour les amateurs de whisky comme pour les futurs amateurs."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -589,6 +661,51 @@
     </div>
   </section>
 
+  <!-- FAQ (Fragen aus der interaktiven Karte) -->
+  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Les questions de nos Hôtes</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Pourquoi Grantown-on-Spey est-elle une si bonne base pour explorer les Highlands ?</summary>
+          <div class="faq-a"><p>Grantown est située au centre de plusieurs régions. Les clients peuvent facilement faire des excursions en étoile vers Speyside, les Cairngorms, la côte de Moray, la région d'Inverness, Strathspey et Aberdeenshire. De nombreux sites sont accessibles en 20 à 50 minutes. Chaque jour peut offrir des paysages et des expériences complètement différents.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Peut-on aller à pied aux restaurants et aux commerces ?</summary>
+          <div class="faq-a"><p>Oui. Garden Park se trouve dans une rue calme. Le centre-ville est à environ 2 minutes à pied. Tous les restaurants sont accessibles en 1 à 10 minutes de marche. Plusieurs sont à moins de 4 minutes.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>À quelle distance se trouve Inverness de Grantown-on-Spey ?</summary>
+          <div class="faq-a"><p>Environ 52 minutes en voiture, via Nairn ou via l'A9. Les transports en commun sont également disponibles — des bus réguliers relient Grantown-on-Spey et Inverness.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Proposez-vous des options de petit-déjeuner végétalien ?</summary>
+          <div class="faq-a"><p>Oui. Des options végétariennes et végétaliennes fraîches sont disponibles tous les jours.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Peut-on faire le Speyside Malt Whisky Trail en une journée ?</summary>
+          <div class="faq-a"><p>Bien sûr, on peut faire le Speyside Malt Whisky Trail en une journée. La vraie question est : vous en souviendrez-vous le lendemain ? 😄 Entre les nombreuses distilleries, centres d'accueil et dégustations, le temps file. Notre conseil : visitez moins de distilleries et profitez davantage de chacune. Daniel propose aussi, sur demande, un service de chauffeur pour un maximum de 4 personnes. Comme les dates se remplissent vite, surtout en haute saison, il est recommandé de réserver au moins 6 semaines à l'avance.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Voit-on vraiment des dauphins depuis la côte de Moray ?</summary>
+          <div class="faq-a"><p>Oui, vraiment — et ils n'ont jamais fait payer l'entrée ! Le meilleur endroit est Chanonry Point près de Fortrose, où l'on aperçoit régulièrement des grands dauphins, surtout 1h30 à 2h après la marée basse. Apportez des jumelles et soyez patient — la récompense en vaut la peine.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Où trouver le site officiel du gouvernement pour demander l'ETA britannique ?</summary>
+          <div class="faq-a"><p>Pour éviter les sites frauduleux de tiers ou des frais de traitement inutiles, ne faites votre demande que via les canaux officiels du gouvernement britannique. Deux options : en ligne directement sur le site officiel <a href="https://www.gov.uk/eta/apply" target="_blank" rel="noopener">gov.uk/eta/apply</a>, ou via l'application officielle « UK ETA » (App Store et Google Play), qui permet de scanner facilement la puce biométrique de votre passeport et votre visage. Important : la demande officielle d'ETA coûte £20. Vérifiez toujours que l'adresse du site se termine exactement par .gov.uk — des sites indépendants ressemblent souvent aux pages officielles mais facturent d'importants frais cachés.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Où se trouve le meilleur whisky d'Écosse ?</summary>
+          <div class="faq-a"><p>Qui sait ? Ce n'était pas très drôle, n'est-ce pas ? 😉 La vérité, c'est que personne ne peut répondre à cette question. L'Écosse compte plus de 140 distilleries et chacun a des goûts différents. Vous adorez peut-être un whisky insulaire tourbé, ou vous débutez tout juste dans le whisky. Dans ce cas, le Speyside est l'un des meilleurs endroits pour commencer. Pourquoi ne pas séjourner chez nous et explorer plus de 50 distilleries à travers le Speyside et le Strathspey ? Une merveilleuse aventure pour les amateurs de whisky comme pour les futurs amateurs.</p></div>
+        </details>
+      </div>
+      <p class="faq-more">Plus de questions et de réponses sur notre <a href="../grantown-map/" target="_blank" rel="noopener">carte interactive</a>.</p>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="section" id="contact" aria-labelledby="contact-title">
     <div class="wrap contact-grid">
@@ -630,7 +747,7 @@
     </div>
     <div>
       <h2 class="footer-h">Sur cette page</h2>
-      <ul><li><a href="#rooms">Chambres</a></li><li><a href="#breakfast">Petit-déjeuner</a></li><li><a href="#explore">Découvrir</a></li><li><a href="#good-to-know">Bon à savoir</a></li></ul>
+      <ul><li><a href="#rooms">Chambres</a></li><li><a href="#breakfast">Petit-déjeuner</a></li><li><a href="#explore">Découvrir</a></li><li><a href="#good-to-know">Bon à savoir</a></li><li><a href="#faq">FAQ</a></li></ul>
     </div>
     <div>
       <h2 class="footer-h">Ailleurs</h2>

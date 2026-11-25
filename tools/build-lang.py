@@ -92,7 +92,12 @@ def walk(html, fn_text, fn_attr):
 
 
 def jsonld_desc(html, fn):
-    return re.sub(r'("description": ")([^"]*)(")', lambda m: m.group(1) + fn(m.group(2)) + m.group(3), html)
+    html = re.sub(r'("description": ")([^"]*)(")', lambda m: m.group(1) + fn(m.group(2)) + m.group(3), html)
+    # FAQ-Daten für Google: Fragen und Antworten mitübersetzen
+    def faq(m):
+        return re.sub(r'("(?:name|text)": ")((?:[^"\\]|\\.)*)(")',
+                      lambda n: n.group(1) + json.dumps(fn(json.loads('"' + n.group(2) + '"')), ensure_ascii=False)[1:-1] + n.group(3), m.group(0))
+    return re.sub(r'<script type="application/ld\+json" id="faq-ld">.*?</script>', faq, html, flags=re.S)
 
 
 def collect(html):
