@@ -275,6 +275,7 @@ a.cred:hover .cred-t { color: var(--green); }
 .gtk { background: var(--surface); border-radius: var(--radius); padding: 24px 26px; box-shadow: var(--shadow); }
 .gtk h3 { font-size: 1.1rem; font-weight: 600; }
 .gtk p { margin: 0; font-size: .96rem; color: var(--muted); }
+.gtk p + p { margin-top: .7em; }
 
 /* Galerie */
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 240px; gap: 14px; }
