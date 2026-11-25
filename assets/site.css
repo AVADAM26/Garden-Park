@@ -232,9 +232,9 @@ p { margin: 0 0 1.1em; }
 .score { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; padding: 18px 0 30px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
 .score-big { font-size: 3.4rem; font-weight: 300; line-height: 1; margin: 0 0 8px; }
 .score-big span { font-size: 1.2rem; color: var(--muted); margin-left: 8px; }
-.score-sub { margin: 0; color: var(--muted); font-size: .95rem; }
-.score-bars { margin: 0; display: grid; gap: 8px; min-width: min(300px, 100%); font-size: .9rem; }
-.score-bars div { display: grid; grid-template-columns: 100px 1fr; align-items: center; gap: 12px; }
+.score-sub { margin: 0; color: var(--muted); font-size: 1.05rem; }
+.score-bars { margin: 0; display: grid; gap: 10px; min-width: min(340px, 100%); font-size: 1rem; }
+.score-bars div { display: grid; grid-template-columns: 115px 1fr; align-items: center; gap: 12px; }
 .score-bars dt { color: var(--muted); }
 .score-bars dd { margin: 0; display: flex; align-items: center; gap: 12px; }
 .score-bars dd span { flex: 1; height: 4px; border-radius: 4px; background: linear-gradient(90deg, var(--green-brand) var(--v), var(--line) var(--v)); }
@@ -364,3 +364,5 @@ address { font-style: normal; margin-bottom: 1em; font-size: 1.05rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+h2.strong { font-weight: 500; }
