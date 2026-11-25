@@ -1785,7 +1785,15 @@
         @keyframes bttHeartIn { 0% { opacity: 0; transform: scale(.3); } 70% { transform: scale(1.25); } 100% { opacity: 1; transform: scale(1); } }
         @media (prefers-reduced-motion: reduce) { .btt-face { transition: none; } }
 
-        </style>
+        
+/* Garden Park: zwei Kronen für Kinrara (fliegen bei jedem Öffnen der Destillerie-Karte ein) */
+.gp-crowns { position: absolute; top: -14px; right: 14px; display: flex; gap: 6px; pointer-events: auto; z-index: 3; }
+.gp-crown { font-size: 30px; line-height: 1; cursor: help; filter: drop-shadow(0 3px 4px rgba(0,0,0,.45)); animation: gpCrownDrop 1.1s cubic-bezier(.3,1.4,.5,1) both; }
+.gp-crown:nth-child(2) { animation-delay: .35s; }
+@keyframes gpCrownDrop { 0% { transform: translateY(-260px) rotate(-35deg); opacity: 0; } 60% { opacity: 1; } 100% { transform: translateY(0) rotate(0); opacity: 1; } }
+.gp-awards { margin-top: 8px; font-size: .82rem; color: #e6c35c; line-height: 1.45; }
+@media (prefers-reduced-motion: reduce) { .gp-crown { animation: none; } }
+</style>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -7909,7 +7917,32 @@
             return out.join('<br>');
         }
         // Links from the blog pages: grantown-map.html#dest=<id> opens that place on the map
-        // Garden Park: #distilleries öffnet direkt die Karte "Speyside Distilleries", #gin springt dort zu den Gin-Kacheln (Links aus der FAQ)
+        
+// Garden Park: Kronen für Kinrara, sobald ihre Kachel in der Destillerie-Karte erscheint
+(function kinraraCrowns() {
+  var AW = [
+    ['World\u2019s Best Signature Botanical, World Gin Awards 2025 (Caper Artist Edition)', '2025'],
+    ['World\u2019s Best Gin Design, World Drinks Awards 2026, London', '2026']
+  ];
+  function decorate() {
+    var card = Array.prototype.find.call(document.querySelectorAll('#destinationsGrid .destination-card'), function (c) {
+      return Array.prototype.some.call(c.querySelectorAll('h3, h4, .card-title, .card-name'), function (h) { return h.textContent.trim() === 'Kinrara'; });
+    });
+    if (!card || card.querySelector('.gp-crowns') || !distilleryMode) return;
+    if (getComputedStyle(card).position === 'static') card.style.position = 'relative';
+    card.style.overflow = 'visible';
+    var box = document.createElement('div'); box.className = 'gp-crowns';
+    AW.forEach(function (a) { var c = document.createElement('span'); c.className = 'gp-crown'; c.textContent = '\uD83D\uDC51'; c.title = a[0]; c.setAttribute('aria-label', a[0]); box.appendChild(c); });
+    card.appendChild(box);
+    var txt = document.createElement('div'); txt.className = 'gp-awards';
+    txt.innerHTML = '\uD83D\uDC51 ' + AW[0][0] + '<br>\uD83D\uDC51 ' + AW[1][0];
+    var contact = card.querySelector('.card-contact');
+    if (contact) card.insertBefore(txt, contact); else card.appendChild(txt);
+  }
+  function start() { var g = document.getElementById('destinationsGrid'); if (g) new MutationObserver(function () { try { decorate(); } catch (e) {} }).observe(g, { childList: true }); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+// Garden Park: #distilleries öffnet direkt die Karte "Speyside Distilleries", #gin springt dort zu den Gin-Kacheln (Links aus der FAQ)
 (function openDistilleriesFromHash() {
   var hash = location.hash; if (hash !== '#distilleries' && hash !== '#gin') return;
   var tries = 0;
