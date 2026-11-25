@@ -174,13 +174,13 @@ p { margin: 0 0 1.1em; }
 .room-facts { list-style: none; padding: 0; margin: 0 0 18px; font-size: .95rem; color: var(--muted); flex: 1; }
 .room-facts li { padding: 5px 0; border-top: 1px solid var(--line); }
 .room-body .btn { align-self: flex-start; }
-.rates-note { margin: 30px 0 0; font-size: .95rem; color: var(--muted); max-width: 760px; }
+.rates-note { margin: 30px 0 0; font-size: .95rem; color: var(--muted); }
 .cottage-card { margin-top: 48px; border-radius: var(--radius); overflow: hidden; background: linear-gradient(90deg, rgba(20,24,18,.88) 0%, rgba(20,24,18,.62) 48%, rgba(20,24,18,0) 75%), url("../img/butterfly-winter-1600.webp") 70% 60% / cover; color: #fff; min-height: 380px; display: flex; align-items: center; }
 .cottage-text { max-width: 560px; padding: clamp(28px, 4vw, 48px); }
 .cottage-text .eyebrow { color: var(--green-brand); }
 .cottage-text .btn-outline { color: #fff; border-color: #fff; }
 .cottage-text .btn-outline:hover { background: #fff; color: #222; }
-.groups { margin-top: 48px; max-width: 760px; }
+.groups { margin-top: 48px; }
 
 /* Saisonbild */
 .season { position: relative; margin: 0; height: clamp(320px, 55vw, 620px); overflow: hidden; }
