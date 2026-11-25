@@ -108,7 +108,7 @@ def collect(html):
 
 
 def fix_paths(html):
-    html = re.sub(r'(["\s,])(img|assets)/', r'\1../\2/', html)
+    html = re.sub(r'(["\s,])(img|assets|grantown-map)/', r'\1../\2/', html)
     return html
 
 
