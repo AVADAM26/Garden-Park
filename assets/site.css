@@ -142,7 +142,7 @@ p { margin: 0 0 1.1em; }
 .section { padding-block: clamp(64px, 8vw, 112px); }
 .section-alt { background: var(--bg-alt); }
 .section-dark { background: var(--bar); color: var(--bar-text); }
-.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .8rem; font-weight: 600; color: var(--green); margin-bottom: 10px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .92rem; font-weight: 600; color: var(--green); margin-bottom: 10px; }
 .section-dark .eyebrow { color: var(--green-brand); }
 .eyebrow::after { content: ""; display: block; width: 44px; height: 2px; background: var(--green-brand); margin-top: 10px; }
 .center .eyebrow::after { margin-inline: auto; }
@@ -169,7 +169,7 @@ p { margin: 0 0 1.1em; }
 .room-card { background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
 .room-card img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
 .room-body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex: 1; }
-.room-cat { margin: 0 0 4px; color: var(--green); font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.room-cat { margin: 0 0 4px; color: var(--green); font-size: .9rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 .room-body h3 { font-size: 1.45rem; font-weight: 400; margin-bottom: 10px; }
 .room-facts { list-style: none; padding: 0; margin: 0 0 18px; font-size: .95rem; color: var(--muted); flex: 1; }
 .room-facts li { padding: 5px 0; border-top: 1px solid var(--line); }
@@ -186,7 +186,7 @@ p { margin: 0 0 1.1em; }
 .season { position: relative; margin: 0; height: clamp(320px, 55vw, 620px); overflow: hidden; }
 .season img { width: 100%; height: 100%; object-fit: cover; }
 .season figcaption { position: absolute; left: 0; right: 0; bottom: 26px; color: #fff; font-size: clamp(1.4rem, 1rem + 1.6vw, 2.2rem); font-weight: 300; text-shadow: 0 2px 14px rgba(0,0,0,.6); }
-.season figcaption span { display: block; font-size: .8rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--green-brand); }
+.season figcaption span { display: block; font-size: .92rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--green-brand); }
 
 /* Frühstück */
 .mosaic { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-rows: auto auto; gap: 14px; }
@@ -204,7 +204,7 @@ p { margin: 0 0 1.1em; }
 /* Angebote */
 .offers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .offer-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 28px; }
-.offer-date { color: var(--green-brand); font-weight: 600; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+.offer-date { color: var(--green-brand); font-weight: 600; font-size: .95rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
 .offer-card { display: flex; flex-direction: column; align-items: flex-start; }
 .offer-card h3 { font-size: 1.5rem; font-weight: 400; }
 .offer-lead { font-style: italic; color: var(--gold-1); }
@@ -241,7 +241,7 @@ p { margin: 0 0 1.1em; }
 .quotes { grid-template-columns: repeat(4, 1fr); max-width: none; }
 .quote { box-shadow: none; border: 1px solid var(--line); padding: 24px; }
 .quote blockquote { font-style: normal; font-size: 1.02rem; }
-.quote figcaption { text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; }
+.quote figcaption { text-transform: uppercase; letter-spacing: .08em; font-size: .86rem; }
 
 /* Auszeichnungen und Green */
 .creds { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 26px 32px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
@@ -297,7 +297,7 @@ address { font-style: normal; margin-bottom: 1em; font-size: 1.05rem; }
 /* Footer */
 .site-footer { background: var(--bar); color: var(--bar-text); padding-top: 56px; font-size: .93rem; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
-.footer-h { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; color: var(--green-brand); margin-bottom: 12px; }
+.footer-h { font-size: .92rem; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; color: var(--green-brand); margin-bottom: 12px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
 .site-footer li { padding: 3px 0; }
 .site-footer a { text-decoration: none; }
