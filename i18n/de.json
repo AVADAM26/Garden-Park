@@ -275,7 +275,6 @@
  "If you cancel between 3 and 13 days before arrival, the cancellation charge is £50 per room.": "Bei einer Stornierung zwischen 3 und 13 Tagen vor der Anreise kostet die Stornierung £50 pro Zimmer.",
  "If you cancel less than 3 days before arrival, the cancellation charge is 75% of the total booking cost.": "Bei einer Stornierung weniger als 3 Tage vor der Anreise kostet die Stornierung 75% des gesamten Buchungsbetrags.",
  "If you do not arrive or reduce your booking after your arrival date, the full cost of the booking is charged.": "Wenn Sie nicht anreisen oder Ihre Buchung nach dem Anreisetag kürzen, wird der volle Buchungsbetrag verrechnet.",
- "For bookings made more than 4 days before arrival, a deposit of the first night is due, and the balance 9 days before arrival. For bookings over £1,000 the deposit is 40%. Bookings made 4 days or less before arrival are paid in full and cannot be refunded. We strongly recommend travel insurance.": "Bei Buchungen mehr als 4 Tage vor der Anreise ist eine Anzahlung für die erste Nacht fällig und der Rest 9 Tage vor der Anreise. Bei Buchungen über £1,000 beträgt die Anzahlung 40%. Buchungen 4 Tage oder weniger vor der Anreise werden voll bezahlt und nicht zurückerstattet. Wir empfehlen sehr eine Reiseversicherung.",
  "The house is slightly raised, about 30 metres from the road. You can reach the entrance by a gentle footpath or by 12 shallow steps. The house is not wheelchair accessible.": "Das Haus liegt leicht erhöht, etwa 30 Meter von der Strasse. Zum Eingang kommen Sie über einen sanft ansteigenden Fussweg oder über 12 flache Stufen. Das Haus ist nicht rollstuhlgängig.",
  "Guests using a rollator or walking aid can access the ground floor, and we recommend Room Sutherland, which has a walk-in shower. Room Mathieson is also on the ground floor, but its shower has a 15 cm step.": "Gäste mit Rollator oder Gehhilfe erreichen das Erdgeschoss gut, und wir empfehlen das Zimmer Sutherland mit Walk-in-Dusche. Das Zimmer Mathieson liegt auch im Erdgeschoss, seine Dusche hat aber einen Absatz von 15 cm.",
  "Our interactive map features 50+ hand-picked destinations and ready-made day trip ideas, organised into 8 categories across 4&nbsp;clear, easy-to-use maps.": "Unsere interaktive Karte zeigt über 50 handverlesene Ziele und fertige Ideen für Tagesausflüge, in 8 Kategorien auf 4&nbsp;übersichtlichen Karten.",
@@ -285,5 +284,7 @@
  "Our interactive map": "Unsere interaktive Karte",
  "Sarah and Daniel's 50+ favourite day trip ideas in and around Grantown-on-Spey.": "Die über 50 liebsten Ausflugsideen von Sarah und Daniel in und um Grantown-on-Spey.",
  "Open the map": "Karte öffnen",
- "Map data © OpenStreetMap contributors": "Kartendaten © OpenStreetMap-Mitwirkende"
+ "Map data © OpenStreetMap contributors": "Kartendaten © OpenStreetMap-Mitwirkende",
+ "For bookings over £1,000 the deposit is 40%. Bookings made 4 days or less before arrival are paid in full and cannot be refunded.": "Bei Buchungen über £1,000 beträgt die Anzahlung 40%. Buchungen 4 Tage oder weniger vor der Anreise werden voll bezahlt und nicht zurückerstattet.",
+ "We strongly recommend travel insurance.": "Wir empfehlen Ihnen dringend eine Reiseversicherung."
 }
