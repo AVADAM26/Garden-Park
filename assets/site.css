@@ -249,7 +249,7 @@ p { margin: 0 0 1.1em; }
 .cred-t { display: block; font-weight: 600; }
 .cred-d { display: block; color: var(--muted); font-size: .9rem; line-height: 1.45; }
 a.cred:hover .cred-t { color: var(--green); }
-.cred img.cred-wide { height: auto; width: 150px; border-radius: 8px; }
+.cred img.cred-wide { height: 68px; width: auto; }
 
 /* Social-Icons */
 .social-btn { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 8px; background: var(--green); color: #fff; transition: background .15s, transform .15s; }
@@ -363,5 +363,3 @@ address { font-style: normal; margin-bottom: 1em; font-size: 1.05rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
-.cred:has(.cred-wide) { grid-column: span 2; }
-@media (max-width: 760px) { .cred:has(.cred-wide) { grid-column: auto; } }
