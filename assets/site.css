@@ -491,3 +491,10 @@ h2.strong { font-weight: 500; }
 .faq-a { padding: 0 22px 18px; }
 .faq-a p { margin: 0; }
 .faq-more { margin-top: 22px; color: var(--muted); }
+/* Grosse Bildschirme: Menüleiste nutzt die Breite, mehr Luft zwischen den Punkten */
+@media (min-width: 1601px) {
+  .site-header .header-inner { max-width: 1680px; padding-inline: 40px; gap: 36px; min-height: 80px; }
+  .main-nav { gap: 30px; font-size: 1.02rem; }
+  .nav-lang { margin-left: 18px; gap: 6px; }
+  .header-actions { gap: 16px; }
+}
