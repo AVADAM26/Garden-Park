@@ -28,6 +28,8 @@ Reines HTML, CSS und JavaScript, kein PHP, kein WordPress. Packages, Angebote un
 
 Bestehende Adressen bleiben: `/`, `/de/`, `/grantown-map/`, `/privacy-policy/`, `/cookie-policy/`. Die Karte auf Butterfly (`/grantown/grantown-map.html`) nie ändern, sie steht als QR-Code im Cairngorms-Guide.
 
+Sprachen: Englisch (`index.html`) ist die Quelle. `/de/`, `/it/`, `/nl/`, `/fr/` werden nie von Hand bearbeitet, sondern mit `python3 tools/build-lang.py` aus `index.html` und den Übersetzungen in `i18n/<sprache>.json` gebaut. Nach jeder Textänderung im Englischen das Skript laufen lassen. Es meldet fehlende und alte Texte, die fehlenden in allen vier Dateien ergänzen. Namen (Zimmer, Wee Fancy Brügel, Generation Getaway, Twixmas, Hogmanay, Butterfly Cottage, Green Tourism, Awards) und „à la minute“ nie übersetzen. Kundenbewertungen bleiben in der Originalsprache. Anrede Deutsch „Sie“, Französisch „vous“, Italienisch „voi“, Holländisch „u“. Deutsch immer „Zweibettzimmer mit zwei Einzelbetten“. Französisch vor ? ein schmales Leerzeichen.
+
 Messen von Anfang an: Google Analytics, Cookie-Banner (Termageddon, Consent Mode v2), Trichter Webseite → Karte → Buchung.
 
 ## Fakten (nichts davon ändern ohne Daniel)

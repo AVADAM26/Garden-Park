@@ -22,7 +22,7 @@
     menuBtn.addEventListener('click', function () {
       var open = nav.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', open);
-      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menuBtn.setAttribute('aria-label', open ? menuBtn.dataset.labelClose : menuBtn.dataset.labelOpen);
     });
     nav.addEventListener('click', function (e) {
       if (e.target.tagName === 'A') { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
@@ -104,7 +104,7 @@
       var id = btn.getAttribute('data-yt');
       var f = document.createElement('iframe');
       f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
-      f.title = 'Garden Park Guest House, short video';
+      f.title = btn.dataset.title || 'Garden Park Guest House';
       f.allow = 'autoplay; encrypted-media; picture-in-picture';
       f.allowFullscreen = true;
       btn.appendChild(f);

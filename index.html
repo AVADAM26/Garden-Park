@@ -7,9 +7,16 @@
 <meta name="description" content="Guest House in Grantown-on-Spey, in the Cairngorms National Park. Six en-suite rooms, freshly cooked breakfast, off-road parking, EV charging and direct booking with Sarah and Daniel.">
 <!-- ENTWURF: Sperre für Suchmaschinen erst beim echten Start entfernen -->
 <meta name="robots" content="noindex, nofollow">
+<!--head-start-->
 <link rel="canonical" href="https://www.garden-park.co.uk/">
 <link rel="alternate" hreflang="en" href="https://www.garden-park.co.uk/">
 <link rel="alternate" hreflang="de" href="https://www.garden-park.co.uk/de/">
+<link rel="alternate" hreflang="it" href="https://www.garden-park.co.uk/it/">
+<link rel="alternate" hreflang="nl" href="https://www.garden-park.co.uk/nl/">
+<link rel="alternate" hreflang="fr" href="https://www.garden-park.co.uk/fr/">
+<link rel="alternate" hreflang="x-default" href="https://www.garden-park.co.uk/">
+<meta property="og:locale" content="en_GB">
+<!--head-end-->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Garden Park Guest House, Grantown-on-Spey">
 <meta property="og:description" content="Bed &amp; breakfast with six en-suite rooms in the Cairngorms National Park. Book direct with Sarah and Daniel.">
@@ -17,7 +24,7 @@
 <meta name="theme-color" content="#2b2b2b">
 <link rel="preload" href="assets/fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/hero-hosts-1600.webp" as="image" imagesrcset="img/hero-hosts-800.webp 800w, img/hero-hosts-1600.webp 1600w, img/hero-hosts-2200.webp 2200w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/site.css?v=25">
+<link rel="stylesheet" href="assets/site.css?v=26">
 <script>
   try { var t = localStorage.getItem('gp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -78,14 +85,14 @@
       <a href="#reviews">Reviews</a>
       <a href="#hosts">Your hosts</a>
       <a href="#contact">Contact</a>
-      <a href="/de/" hreflang="de" lang="de" class="nav-lang" target="_blank" rel="noopener">Deutsch</a>
+      <!--lang-start--><span class="nav-lang" role="group" aria-label="Language"><a href="./" hreflang="en" lang="en" aria-current="true">EN</a><a href="de/" hreflang="de" lang="de">DE</a><a href="it/" hreflang="it" lang="it">IT</a><a href="nl/" hreflang="nl" lang="nl">NL</a><a href="fr/" hreflang="fr" lang="fr">FR</a></span><!--lang-end-->
     </nav>
     <div class="header-actions">
       <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark mode">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path class="sun" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5v3m0 14v3m10-10h-3M5 12H2m15.07-7.07-2.12 2.12M9.05 14.95l-2.12 2.12m12.14 0-2.12-2.12M9.05 9.05 6.93 6.93"/><path class="moon" d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
       </button>
       <a class="btn btn-primary btn-book" data-direct-booking href="https://booking-directly.com/widgets/JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX/properties/unit-selection?search_stay_dates={%22checkInDate%22:%222026-11-25%22,%22checkOutDate%22:%222026-11-26%22}&amp;search_occupancies=[{%22numberOfAdults%22:2,%22children%22:[]}]" target="_blank" rel="noopener">Check availability</a>
-      <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="main-nav">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
@@ -153,7 +160,7 @@
         <p class="small muted">Licence, Home Sharing, No. HI-70000-R</p>
       </div>
       <div class="split-media">
-        <button class="video-facade" type="button" data-yt="zFhZOaBi0DI" aria-label="Play the short video about Garden Park Guest House">
+        <button class="video-facade" type="button" data-yt="zFhZOaBi0DI" data-title="Garden Park Guest House, short video" aria-label="Play the short video about Garden Park Guest House">
           <img src="img/hallway-800.webp" srcset="img/hallway-800.webp 800w, img/hallway-1200.webp 1200w" sizes="(min-width: 900px) 40vw, 100vw" alt="Hallway and staircase at Garden Park Guest House" width="800" height="1067" loading="lazy">
           <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
           <span class="video-label">Short video · 1 min</span>
@@ -592,6 +599,6 @@
   </svg>
 </button>
 
-<script src="assets/site.js?v=11" defer></script>
+<script src="assets/site.js?v=12" defer></script>
 </body>
 </html>

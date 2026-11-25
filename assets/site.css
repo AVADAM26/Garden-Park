@@ -82,8 +82,8 @@ p { margin: 0 0 1.1em; }
 .site-header.scrolled { box-shadow: 0 6px 20px rgba(0,0,0,.25); }
 .header-inner { display: flex; align-items: center; gap: 20px; min-height: 68px; }
 .brand { flex: none; }
-.main-nav { display: flex; gap: 22px; margin-left: auto; font-size: .95rem; }
-.main-nav a { text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; }
+.main-nav { display: flex; gap: 18px; margin-left: auto; font-size: .95rem; }
+.main-nav a { white-space: nowrap; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; }
 .main-nav a:hover, .main-nav a.active { color: var(--green-brand); border-bottom-color: var(--green-brand); }
 .header-actions { display: flex; align-items: center; gap: 10px; }
 .icon-btn { background: none; border: 0; color: inherit; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; }
@@ -324,14 +324,18 @@ address { font-style: normal; margin-bottom: 1em; font-size: 1.05rem; }
 @keyframes flapR { to { transform: rotate(38deg); } }
 @keyframes fly { 0% { transform: none; } 15% { transform: translateY(6px); } 100% { transform: translate(-30px, -110vh) rotate(-8deg); } }
 
-/* ---------- Handy und Tablet ---------- */
-@media (max-width: 1020px) {
+/* ---------- Menü wird zum Hamburger (Platz für 5 Sprachen, auch auf Deutsch) ---------- */
+@media (max-width: 1430px) {
   .menu-toggle { display: grid; }
   .btn-book { display: none; }
   .main-nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--bar); padding: 8px 20px 20px; margin: 0; display: none; box-shadow: 0 12px 20px rgba(0,0,0,.25); }
   .main-nav.open { display: flex; }
   .main-nav a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
   .header-actions { margin-left: auto; }
+}
+
+/* ---------- Handy und Tablet ---------- */
+@media (max-width: 1020px) {
   .facts-list { row-gap: 14px; }
   .rooms-grid, .gtk-grid, .quotes { grid-template-columns: repeat(2, 1fr); }
   .offers-grid { grid-template-columns: 1fr; }
@@ -416,3 +420,14 @@ h2.strong { font-weight: 500; }
 .lucy { display: flex; gap: 18px; align-items: center; margin: 1.2em 0; }
 .lucy img { width: 110px; height: auto; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,.14); flex: none; }
 .lucy .lucy-note { margin: 0; }
+
+/* Sprachwahl im Menü */
+.nav-lang { display: flex; align-items: center; gap: 2px; margin-left: 6px; }
+.main-nav .nav-lang a { font-size: .8rem; letter-spacing: .06em; padding: 4px 6px; border-radius: 6px; border-bottom: 0; opacity: .75; }
+.main-nav .nav-lang a:hover { opacity: 1; }
+.main-nav .nav-lang a[aria-current] { opacity: 1; color: var(--green-brand); font-weight: 600; }
+@media (max-width: 1430px) {
+  .nav-lang { margin: 10px 0 0; gap: 6px; }
+  .main-nav .nav-lang a { font-size: .9rem; padding: 8px 10px; border: 1px solid rgba(255,255,255,.15); }
+}
+.btn-book { white-space: nowrap; }
