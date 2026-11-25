@@ -124,3 +124,21 @@
     links.forEach(function (a) { var s = document.querySelector(a.getAttribute('href')); if (s) obs.observe(s); });
   }
 })();
+
+// Handy und Tablet (kein Hover): Goldkacheln glänzen einmal, wenn sie ins Bild kommen, und bei jedem Antippen
+(function () {
+  if (!window.matchMedia || !matchMedia('(hover: none)').matches) return;
+  var cards = document.querySelectorAll('.gold-card');
+  function shine(el) {
+    el.classList.remove('shine'); void el.offsetWidth;
+    el.classList.add('shine');
+    setTimeout(function () { el.style.transition = 'none'; el.classList.remove('shine'); void el.offsetWidth; el.style.transition = ''; }, 1400);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { setTimeout(function () { shine(e.target); }, 250); io.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    cards.forEach(function (c) { io.observe(c); });
+  }
+  cards.forEach(function (c) { c.addEventListener('touchstart', function () { shine(c); }, { passive: true }); });
+})();
