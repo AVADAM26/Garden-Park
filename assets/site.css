@@ -229,7 +229,7 @@ p { margin: 0 0 1.1em; }
 .review-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
 /* Bewertungen im Stil von Butterfly */
-.score { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; padding: 18px 0 30px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+.score { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; padding: 18px 0 30px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
 .score-big { font-size: 3.4rem; font-weight: 300; line-height: 1; margin: 0 0 8px; }
 .score-big span { font-size: 1.2rem; color: var(--muted); margin-left: 8px; }
 .score-sub { margin: 0; color: var(--muted); font-size: 1.05rem; }
