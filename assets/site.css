@@ -411,3 +411,8 @@ h2.strong { font-weight: 500; }
 .creds-reviews { margin-top: 40px; border-top: 0; padding-top: 0; justify-content: center; }
 
 .lucy-note { border-left: 3px solid var(--gold-2); padding-left: 16px; font-style: italic; }
+
+/* Lucy neben ihrem Satz */
+.lucy { display: flex; gap: 18px; align-items: center; margin: 1.2em 0; }
+.lucy img { width: 110px; height: auto; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,.14); flex: none; }
+.lucy .lucy-note { margin: 0; }
