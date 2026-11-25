@@ -7942,6 +7942,21 @@
   function start() { var g = document.getElementById('destinationsGrid'); if (g) new MutationObserver(function () { try { decorate(); } catch (e) {} }).observe(g, { childList: true }); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
+// Garden Park: Sprungziele wie #golfFishingSection oder #travelSection nach dem Laden nochmals anfahren (die Seite verschiebt sich beim Aufbau)
+(function jumpToSectionFromHash() {
+  var id = location.hash.slice(1); if (!/^(golfFishingSection|travelSection|noCarSection)$/.test(id)) return;
+  var tries = 0;
+  function go() {
+    tries++;
+    var el = document.getElementById(id);
+    var ready = el && typeof map !== 'undefined' && map && map._loaded;
+    if (!ready) { if (tries < 40) setTimeout(go, 250); return; }
+    setTimeout(function () { el.scrollIntoView({ block: 'start' }); }, 400);
+    setTimeout(function () { el.scrollIntoView({ block: 'start' }); }, 1500);
+  }
+  if (document.readyState === 'complete') setTimeout(go, 300);
+  else window.addEventListener('load', function () { setTimeout(go, 300); });
+})();
 // Garden Park: #distilleries öffnet direkt die Karte "Speyside Distilleries", #gin springt dort zu den Gin-Kacheln (Links aus der FAQ)
 (function openDistilleriesFromHash() {
   var hash = location.hash; if (hash !== '#distilleries' && hash !== '#gin') return;
