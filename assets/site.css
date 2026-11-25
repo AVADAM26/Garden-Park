@@ -409,3 +409,5 @@ h2.strong { font-weight: 500; }
 .facts-list li.gold-card { box-shadow: 0 8px 18px -12px rgba(156, 122, 38, .35); padding: 8px 10px; }
 
 .creds-reviews { margin-top: 40px; border-top: 0; padding-top: 0; justify-content: center; }
+
+.lucy-note { border-left: 3px solid var(--gold-2); padding-left: 16px; font-style: italic; }
