@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/hero-hosts-1600.webp" as="image" imagesrcset="../img/hero-hosts-800.webp 800w, ../img/hero-hosts-1600.webp 1600w, ../img/hero-hosts-2200.webp 2200w" imagesizes="100vw">
-<link rel="stylesheet" href="../assets/site.css?v=33">
+<link rel="stylesheet" href="../assets/site.css?v=34">
 <script>
   try { var t = localStorage.getItem('gp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -332,7 +332,7 @@
         <p class="eyebrow">Offres &amp; nouvelles</p>
         <h2 id="offers-title">Quoi de neuf au Garden Park</h2>
       </div>
-      <div class="offers-grid">
+      <div id="m-offers" class="m-collapsible offers-grid">
         <article class="offer-card offer-feature">
           <img class="offer-img" src="../img/generation-getaway-800.webp" srcset="../img/generation-getaway-800.webp 800w, ../img/generation-getaway-1400.webp 1400w" sizes="(min-width: 1020px) 560px, 100vw" alt="Trois générations d'une famille avec Sarah, Daniel et Lucy devant le Garden Park Guest House" width="800" height="450" loading="lazy">
           <div class="offer-body">
@@ -368,6 +368,7 @@
           <a class="btn btn-primary btn-sm" href="https://booking-directly.com/widgets/JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX/properties/unit-selection?search_stay_dates={%22checkInDate%22:%222026-12-30%22,%22checkOutDate%22:%222027-01-02%22}&amp;search_occupancies=[{%22numberOfAdults%22:2,%22children%22:[]}]" target="_blank" rel="noopener">Disponibilités Hogmanay</a>
         </article>
       </div>
+      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-offers" data-label-open="Voir les offres &amp; nouvelles" data-label-close="Voir moins">Voir les offres &amp; nouvelles</button>
     </div>
   </section>
 
@@ -379,7 +380,7 @@
         <h2 id="explore-title">Grantown-on-Spey et les Cairngorms</h2>
         <p>Fondée au XVIIIe siècle, Grantown est la capitale historique du Strathspey et une base presque parfaite dans les Highlands pour les excursions, le whisky, la nature et la côte. Depuis 2003, la ville fait partie du Cairngorms National Park, le plus grand parc national du Royaume-Uni.</p>
       </div>
-      <div class="gtk-grid area-grid">
+      <div id="m-area" class="m-collapsible gtk-grid area-grid">
         <div class="gtk">
           <h3>Balades et faune</h3>
           <p>Les Anagach Woods et le Speyside Way commencent à quelques minutes de la porte, et nous sommes le Guest House le plus proche du sentier. Cerfs, loutres, dauphins, aigles royaux, balbuzards et martres vivent dans la région, et le centre RSPB de Loch Garten est à quelques minutes en voiture.</p>
@@ -405,6 +406,7 @@
           <p>La pêche et la chasse à l'approche peuvent être organisées avec un guide local pendant votre séjour. Équitation, randonnée à poney, observation des oiseaux, ski, snowboard et rafting sont tous à proximité.</p>
         </div>
       </div>
+      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-area" data-label-open="Balades, whisky &amp; plus" data-label-close="Voir moins">Balades, whisky &amp; plus</button>
       <div class="map-cta">
         <h3>Préparez votre séjour en toute simplicité</h3>
         <p>Notre carte interactive présente plus de 50 destinations choisies avec soin et des idées d'excursions toutes prêtes, réparties en 8 catégories sur 4 cartes claires et faciles à utiliser.</p>
@@ -454,7 +456,7 @@
         <p class="eyebrow">Bon à savoir</p>
         <h2 id="gtk-title">Tout ce qu'il faut savoir avant de réserver</h2>
       </div>
-      <div class="gtk-grid">
+      <div id="m-gtk" class="m-collapsible gtk-grid">
         <div class="gtk">
           <h3>Périodes d'ouverture</h3>
           <p>Nous sommes ouverts de mars à octobre, ainsi qu'à Noël et au Nouvel An du 26 décembre au 4 janvier. De novembre à février, la maison est fermée, car notre vieille maison en granit met très longtemps à se réchauffer. Sur demande, nous pouvons ouvrir la maison en hiver pour des groupes d'au moins six personnes et un minimum de trois nuits.</p>
@@ -480,6 +482,7 @@
           <p>Chaque chambre dispose de thé et café offerts, de produits d'accueil, d'une TV et d'un sèche-cheveux. Vous êtes les bienvenus dans notre salon pour les Hôtes, où vous trouverez des jeux de société, des livres et des informations sur la région. Les jours plus frais, le poêle à bois rend la pièce chaude et douillette.</p>
         </div>
       </div>
+      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-gtk" data-label-open="Voir tout avant de réserver" data-label-close="Voir moins">Voir tout avant de réserver</button>
     </div>
   </section>
 
@@ -490,7 +493,7 @@
         <p class="eyebrow">Galerie</p>
         <h2 id="gallery-title">Un coup d'œil dans la maison</h2>
       </div>
-      <div class="gallery">
+      <div id="m-gallery" class="m-collapsible gallery">
         <img class="g-lounge" src="../img/lounge-800.webp" alt="Salon avec poêle à bois et canapés en cuir" width="800" height="600" loading="lazy">
         <img class="g-room" src="../img/breakfast-room-800.webp" alt="Salle du petit-déjeuner avec chemins de table en tartan" width="800" height="1067" loading="lazy">
         <img class="g-scot plate" src="../img/breakfast-full-scottish-600.webp" srcset="../img/breakfast-full-scottish-600.webp 600w, ../img/breakfast-full-scottish-900.webp 900w" sizes="(min-width: 760px) 30vw, 50vw" alt="Full Scottish Breakfast avec bacon, saucisse, œuf au plat, black pudding, champignons, haricots, tomates cerises et toasts" width="600" height="694" loading="lazy">
@@ -501,6 +504,7 @@
         <img class="g-pros" src="../img/prosecco-800.webp" alt="Prosecco et fraises près de la fenêtre dans l'une de nos chambres" width="800" height="600" loading="lazy">
         <img class="g-night" src="../img/garden-night-800.webp" srcset="../img/garden-night-800.webp 800w, ../img/garden-night-1200.webp 1200w" sizes="(min-width: 760px) 66vw, 100vw" alt="Garden Park Guest House illuminé un soir de printemps, avec des tulipes dans le jardin" width="800" height="600" loading="lazy">
       </div>
+      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-gallery" data-label-open="Voir toutes les photos" data-label-close="Voir moins">Voir toutes les photos</button>
     </div>
   </section>
 
@@ -647,6 +651,6 @@
   </svg>
 </button>
 
-<script src="../assets/site.js?v=13" defer></script>
+<script src="../assets/site.js?v=14" defer></script>
 </body>
 </html>

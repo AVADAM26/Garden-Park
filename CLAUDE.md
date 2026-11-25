@@ -22,6 +22,9 @@ Der heutige Look von garden-park.co.uk gefällt Daniel und bleibt: dunkle Menül
 
 Pflicht in jedem Projekt: Hell/Dunkel-Modus, Geschwindigkeit immer mit Google PageSpeed Insights (pagespeed.web.dev) prüfen bzw. vor dem Start lokal mit Lighthouse (gleiche Messung, Handy und Computer), keine teuren CSS-Filter wie grosse blur() auf Bildern (lieber vorberechnete Bilder), Back-to-Top mit eigenem, überraschendem Motiv (Daniels Markenzeichen), PageSpeed auf Maximum, Footer „Website by AVADAM“ mit Link auf https://avadam26.github.io/avadam/.
 
+- **Gold ist am Maximum** (Stand 25.11.2026): Deluxe/Superior, Goldkacheln in Faktenleiste, Good to know und Bewertungen, Frühstücksteller mit Goldrahmen. Wünscht Daniel mehr Gold, ihn zuerst daran erinnern, nicht einfach umsetzen.
+- Auf dem Handy sind Packages & news, die sechs Kacheln bei The area, Good to know und die Galerie (zeigt nur das Haus bei Nacht) zum Aufklappen (`.m-collapsible` und `.m-toggle`). Am Computer ist alles offen.
+
 ## Technik
 
 Reines HTML, CSS und JavaScript, kein PHP, kein WordPress. Packages, Angebote und News pflegen Sarah und Daniel später selber über ein Redaktionsfenster; daraus wird fertiges HTML gebaut (für Google und KIs lesbar, nichts per JavaScript nachladen). Hosting bei twofentons (Katie, Darren), eigenes Control Panel angefragt.

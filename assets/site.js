@@ -142,3 +142,15 @@
   }
   cards.forEach(function (c) { c.addEventListener('touchstart', function () { shine(c); }, { passive: true }); });
 })();
+
+// Handy: Bereiche auf- und zuklappen
+document.querySelectorAll('.m-toggle').forEach(function (btn) {
+  var box = document.getElementById(btn.getAttribute('aria-controls'));
+  if (!box) return;
+  btn.addEventListener('click', function () {
+    var open = box.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? btn.dataset.labelClose : btn.dataset.labelOpen;
+    if (!open) { var sec = btn.closest('section'); if (sec && sec.getBoundingClientRect().top < 0) sec.scrollIntoView({ block: 'start' }); }
+  });
+});

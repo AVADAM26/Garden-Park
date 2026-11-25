@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/hero-hosts-1600.webp" as="image" imagesrcset="img/hero-hosts-800.webp 800w, img/hero-hosts-1600.webp 1600w, img/hero-hosts-2200.webp 2200w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/site.css?v=33">
+<link rel="stylesheet" href="assets/site.css?v=34">
 <script>
   try { var t = localStorage.getItem('gp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -332,7 +332,7 @@
         <p class="eyebrow">Packages &amp; news</p>
         <h2 id="offers-title">What's on at Garden Park</h2>
       </div>
-      <div class="offers-grid">
+      <div id="m-offers" class="m-collapsible offers-grid">
         <article class="offer-card offer-feature">
           <img class="offer-img" src="img/generation-getaway-800.webp" srcset="img/generation-getaway-800.webp 800w, img/generation-getaway-1400.webp 1400w" sizes="(min-width: 1020px) 560px, 100vw" alt="Three generations of a family with Sarah, Daniel and Lucy in front of Garden Park Guest House" width="800" height="450" loading="lazy">
           <div class="offer-body">
@@ -368,6 +368,7 @@
           <a class="btn btn-primary btn-sm" href="https://booking-directly.com/widgets/JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX/properties/unit-selection?search_stay_dates={%22checkInDate%22:%222026-12-30%22,%22checkOutDate%22:%222027-01-02%22}&amp;search_occupancies=[{%22numberOfAdults%22:2,%22children%22:[]}]" target="_blank" rel="noopener">Check Hogmanay availability</a>
         </article>
       </div>
+      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-offers" data-label-open="Show packages &amp; news" data-label-close="Show less">Show packages &amp; news</button>
     </div>
   </section>
 
@@ -379,7 +380,7 @@
         <h2 id="explore-title">Grantown-on-Spey and the Cairngorms</h2>
         <p>Founded in the 18th century, Grantown is the historical capital of Strathspey and a near-perfect Highland base for day trips, whisky, nature and coast. Since 2003 the town has been part of the Cairngorms National Park, the largest national park in the United Kingdom.</p>
       </div>
-      <div class="gtk-grid area-grid">
+      <div id="m-area" class="m-collapsible gtk-grid area-grid">
         <div class="gtk">
           <h3>Walks and wildlife</h3>
           <p>Anagach Woods and the Speyside Way begin minutes from the door, and we are the Guest House closest to the route. Red deer, otters, dolphins, golden eagles, osprey and pine martens all live in the region, and the RSPB centre at Loch Garten is a short drive away.</p>
@@ -405,6 +406,7 @@
           <p>Fishing and stalking can be arranged with a local guide during your stay. Horse riding, pony trekking, birdwatching, skiing, snowboarding and white-water rafting are all nearby.</p>
         </div>
       </div>
+      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-area" data-label-open="Show walks, whisky &amp; more" data-label-close="Show less">Show walks, whisky &amp; more</button>
       <div class="map-cta">
         <h3>Plan your stay with ease</h3>
         <p>Our interactive map features 50+ hand-picked destinations and ready-made day trip ideas, organised into 8 categories across 4 clear, easy-to-use maps.</p>
@@ -454,7 +456,7 @@
         <p class="eyebrow">Good to know</p>
         <h2 id="gtk-title">Everything before you book</h2>
       </div>
-      <div class="gtk-grid">
+      <div id="m-gtk" class="m-collapsible gtk-grid">
         <div class="gtk">
           <h3>Opening times</h3>
           <p>We are open from March to October, and over Christmas and New Year from 26 December to 4 January. From November to February the house is closed, as our old granite house takes a long time to heat. On request, we can open the house in winter for groups of at least six people staying a minimum of three nights.</p>
@@ -480,6 +482,7 @@
           <p>Every room has a complimentary beverage tray, bathroom toiletries, a TV and a hairdryer. You are very welcome to spend time in our residents' lounge, where you'll find board games, books and information about the local area. On colder days, the log-burning stove keeps the room warm and cosy.</p>
         </div>
       </div>
+      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-gtk" data-label-open="Show everything before you book" data-label-close="Show less">Show everything before you book</button>
     </div>
   </section>
 
@@ -490,7 +493,7 @@
         <p class="eyebrow">Gallery</p>
         <h2 id="gallery-title">A look around</h2>
       </div>
-      <div class="gallery">
+      <div id="m-gallery" class="m-collapsible gallery">
         <img class="g-lounge" src="img/lounge-800.webp" alt="Residents' lounge with log-burning stove and leather sofas" width="800" height="600" loading="lazy">
         <img class="g-room" src="img/breakfast-room-800.webp" alt="Breakfast room with tartan table runners" width="800" height="1067" loading="lazy">
         <img class="g-scot plate" src="img/breakfast-full-scottish-600.webp" srcset="img/breakfast-full-scottish-600.webp 600w, img/breakfast-full-scottish-900.webp 900w" sizes="(min-width: 760px) 30vw, 50vw" alt="Full Scottish breakfast with bacon, sausage, fried egg, black pudding, mushrooms, beans, cherry tomatoes and toast" width="600" height="694" loading="lazy">
@@ -501,6 +504,7 @@
         <img class="g-pros" src="img/prosecco-800.webp" alt="Prosecco and strawberries by the window in one of our rooms" width="800" height="600" loading="lazy">
         <img class="g-night" src="img/garden-night-800.webp" srcset="img/garden-night-800.webp 800w, img/garden-night-1200.webp 1200w" sizes="(min-width: 760px) 66vw, 100vw" alt="Garden Park Guest House lit up on a spring evening, with tulips in the front garden" width="800" height="600" loading="lazy">
       </div>
+      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-gallery" data-label-open="Show all photos" data-label-close="Show less">Show all photos</button>
     </div>
   </section>
 
@@ -647,6 +651,6 @@
   </svg>
 </button>
 
-<script src="assets/site.js?v=13" defer></script>
+<script src="assets/site.js?v=14" defer></script>
 </body>
 </html>
