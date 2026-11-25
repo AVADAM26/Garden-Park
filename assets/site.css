@@ -124,7 +124,7 @@ p { margin: 0 0 1.1em; }
 .hero-sub { display: block; font-weight: 400; font-size: clamp(1.15rem, .9rem + 1vw, 1.6rem); letter-spacing: .04em; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
 .intro { background: var(--surface); }
 .intro-inner { text-align: center; padding-block: 34px 30px; }
-.hero-lead { max-width: 680px; margin: 0 auto 20px; font-size: 1.12rem; }
+.hero-lead { max-width: 1060px; margin: 0 auto 20px; font-size: 1.12rem; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .intro .btn-ghost { border-color: var(--green); color: var(--text); }
 .intro .btn-ghost:hover { background: var(--green); color: #fff; }
