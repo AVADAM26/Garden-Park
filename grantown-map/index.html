@@ -7912,10 +7912,19 @@
         // Garden Park: #distilleries öffnet direkt die Karte "Speyside Distilleries" (Link aus der FAQ)
 (function openDistilleriesFromHash() {
   if (location.hash !== '#distilleries') return;
-  setTimeout(function () {
-    if (typeof enterDistilleryMode === 'function') enterDistilleryMode();
-    var m = document.getElementById('map'); if (m) m.scrollIntoView({ block: 'start' });
-  }, 800);
+  var tries = 0;
+  function go() {
+    tries++;
+    var banner = document.getElementById('distilleryBanner');
+    var ready = typeof enterDistilleryMode === 'function' && typeof map !== 'undefined' && map && map._loaded;
+    if (!ready) { if (tries < 40) setTimeout(go, 250); return; }
+    if (!(banner && banner.offsetParent)) { try { enterDistilleryMode(); } catch (e) {} }
+    setTimeout(function () { if (banner) banner.scrollIntoView({ block: 'center' }); }, 400);
+    // falls die Seite beim Laden nochmals zurücksetzt: einmal nachprüfen
+    if (tries < 40) setTimeout(function () { if (banner && !banner.offsetParent) go(); }, 1500);
+  }
+  if (document.readyState === 'complete') setTimeout(go, 300);
+  else window.addEventListener('load', function () { setTimeout(go, 300); });
 })();
 function openDestFromHash() {
             const m = location.hash.match(/^#dest=([a-z0-9_-]+)$/i);
