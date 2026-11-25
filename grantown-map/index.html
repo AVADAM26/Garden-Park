@@ -7909,7 +7909,15 @@
             return out.join('<br>');
         }
         // Links from the blog pages: grantown-map.html#dest=<id> opens that place on the map
-        function openDestFromHash() {
+        // Garden Park: #distilleries öffnet direkt die Karte "Speyside Distilleries" (Link aus der FAQ)
+(function openDistilleriesFromHash() {
+  if (location.hash !== '#distilleries') return;
+  setTimeout(function () {
+    if (typeof enterDistilleryMode === 'function') enterDistilleryMode();
+    var m = document.getElementById('map'); if (m) m.scrollIntoView({ block: 'start' });
+  }, 800);
+})();
+function openDestFromHash() {
             const m = location.hash.match(/^#dest=([a-z0-9_-]+)$/i);
             if (!m) return;
             setTimeout(function() { if (typeof showPlaceOnMap === 'function') showPlaceOnMap(m[1]); }, 700);
