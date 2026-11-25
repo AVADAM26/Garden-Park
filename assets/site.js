@@ -64,6 +64,32 @@
     });
   }
 
+  // Titelbild: immer so viel vom Haus wie möglich zeigen, unten bis knapp unter die Hände (84 % der Bildhöhe)
+  var heroImg = document.querySelector('.hero-img');
+  function fitHero() {
+    if (!heroImg || !heroImg.naturalWidth) return;
+    var hero = heroImg.parentNode;
+    var W = hero.clientWidth, H = hero.clientHeight;
+    var r = heroImg.naturalWidth / heroImg.naturalHeight;
+    var TOP = 0.06, BOTTOM = 0.84;                 // sichtbarer Bereich: Dach bis knapp unter die Hände
+    var maxIh = H / (BOTTOM - TOP);                 // nie stärker zoomen als nötig
+    var Ih = Math.max(H, W / r);
+    if (Ih > maxIh) {                               // sehr breiter Bildschirm: Foto nicht strecken, Seiten weich ausblenden
+      Ih = maxIh;
+      heroImg.classList.add('framed');
+      heroImg.style.width = (Ih * r) + 'px';
+    } else {
+      heroImg.classList.remove('framed');
+      heroImg.style.width = '';
+    }
+    var p = Ih <= H + 1 ? 0.5 : Math.min(1, Math.max(0, (BOTTOM * Ih - H) / (Ih - H)));
+    heroImg.style.objectPosition = '50% ' + (p * 100).toFixed(1) + '%';
+  }
+  if (heroImg) {
+    if (heroImg.complete) fitHero(); else heroImg.addEventListener('load', fitHero);
+    window.addEventListener('resize', fitHero, { passive: true });
+  }
+
   // Buchungsknopf oben: Daten im Link immer auf heute und morgen setzen
   document.querySelectorAll('[data-direct-booking]').forEach(function (a) {
     function iso(d) { return d.toISOString().slice(0, 10); }
