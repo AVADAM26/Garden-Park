@@ -363,3 +363,5 @@ address { font-style: normal; margin-bottom: 1em; font-size: 1.05rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.cred:has(.cred-wide) { grid-column: span 2; }
+@media (max-width: 760px) { .cred:has(.cred-wide) { grid-column: auto; } }
