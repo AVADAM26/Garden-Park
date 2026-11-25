@@ -42,7 +42,7 @@ Messen von Anfang an: Google Analytics, Cookie-Banner (Termageddon, Consent Mode
 
 ## Links
 
-Instagram https://www.instagram.com/gardenpark1868 · Facebook https://www.facebook.com/GardenParkGuestHouse/ · YouTube https://www.youtube.com/@scotlandbydan · TripAdvisor https://www.tripadvisor.co.uk/Hotel_Review-g190790-d1749566-Reviews-Garden_Park_Guest_House-Grantown_on_Spey_Aviemore_and_the_Cairngorms_Scottish_Highland.html · Booking.com https://www.booking.com/Share-k75dkx · Google https://share.google/eFxh1GessZjSeQAQ1
+Instagram https://www.instagram.com/gardenpark1868 · Facebook https://www.facebook.com/GardenParkGuestHouse/ · YouTube https://www.youtube.com/@scotlandbydan · TripAdvisor https://www.tripadvisor.co.uk/Hotel_Review-g190790-d1749566-Reviews-Garden_Park_Guest_House-Grantown_on_Spey_Aviemore_and_the_Cairngorms_Scottish_Highland.html · Booking.com https://www.booking.com/hotel/gb/garden-park-guest-house.html · Google https://share.google/eFxh1GessZjSeQAQ1
 
 ## Regeln
 
