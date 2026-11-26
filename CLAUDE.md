@@ -27,6 +27,7 @@ Pflicht in jedem Projekt: Hell/Dunkel-Modus, Geschwindigkeit immer mit Google Pa
 - Good to know ist eine kompakte Liste (Name und kurzer Wert), ein Klick zeigt rechts den Text mit grossem grünem Wert und Untertitel; am Anfang ist Opening times offen. Auf dem Handy öffnet sich der Text unter der Zeile.
 - Bewegung beim Scrollen: Galeriefotos werden von links eingeschoben, die 5 und die Balken bei den Bewertungen zählen von 0 hoch. Ist der Bereich länger als 3 Sekunden ausser Sicht, startet beides beim nächsten Hinscrollen frisch. Nur mit `translate`/`opacity`, damit nichts springt (CLS 0), und aus bei „reduzierte Bewegung“.
 - Handy: oben verschmilzt die Menüleiste mit dem Hero-Foto, nur die Knöpfe bleiben (runder dunkler Hintergrund). Beim Scrollen werden Leiste und kleines Logo in den ersten rund 90 px eingeblendet (`--hb` im Skript), bei offenem Menü ist die Leiste sofort voll da.
+- Zimmer kompakt (Idee von Adi): oben eine Reihe mit 6 Zimmern und Butterfly Cottage (Foto, Kategorie, Name). „More room details“ klappt die ausführlichen Zimmerkarten, den Preishinweis und die Butterfly-Karte auf; ein Klick auf ein Zimmer öffnet direkt bei diesem Zimmer. Auf dem Handy zweispaltig und mittig.
 - Kartenkachel bei The area ohne Kachel-Schatten, nur feiner Rahmen in der Farbe von „Open the map“. Getting here bei Kontakt ohne Kachel, mit feiner Linie.
 
 ## Technik

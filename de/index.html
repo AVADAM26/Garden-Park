@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/hero-hosts-1600.webp" as="image" imagesrcset="../img/hero-hosts-800.webp 800w, ../img/hero-hosts-1600.webp 1600w, ../img/hero-hosts-2200.webp 2200w" imagesizes="100vw">
-<link rel="stylesheet" href="../assets/site.css?v=47">
+<link rel="stylesheet" href="../assets/site.css?v=48">
 <script>
   try { var t = localStorage.getItem('gp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -261,8 +261,18 @@
         <p>Alle sechs Zimmer haben ein eigenes Bad, sind individuell eingerichtet und hochwertig ausgestattet. Gute Betten, Zentralheizung und elektrisch beheizbare Unterdecken sorgen dafür, dass Sie gut schlafen. In jedem Zimmer gibt es einen Föhn, einen Fernseher und eine Auswahl an Tee und Kaffee. Einzelbelegung ist in jedem Zimmer möglich.</p>
       </div>
 
+      <ul class="rooms-strip" id="rooms-strip">
+        <li><a href="#room-grant" data-room="room-grant"><img src="../img/room-grant-480.webp" alt="Zimmer Grant mit King-Size-Bett" width="480" height="360" loading="lazy"><span class="room-cat gold">Deluxe</span><span class="strip-name">Grant</span></a></li>
+        <li><a href="#room-macdonald" data-room="room-macdonald"><img src="../img/room-macdonald-480.webp" alt="Zimmer MacDonald mit Super-King-Size-Bett" width="480" height="360" loading="lazy"><span class="room-cat gold">Superior</span><span class="strip-name">MacDonald</span></a></li>
+        <li><a href="#room-fraser" data-room="room-fraser"><img src="../img/room-fraser-480.webp" alt="Doppelzimmer Fraser" width="480" height="360" loading="lazy"><span class="room-cat">Doppelzimmer</span><span class="strip-name">Fraser</span></a></li>
+        <li><a href="#room-mackay" data-room="room-mackay"><img src="../img/room-mackay-480.webp" alt="Zweibettzimmer mit zwei Einzelbetten MacKay" width="480" height="360" loading="lazy"><span class="room-cat">Zweibettzimmer mit zwei Einzelbetten</span><span class="strip-name">MacKay</span></a></li>
+        <li><a href="#room-sutherland" data-room="room-sutherland"><img src="../img/room-sutherland-480.webp" alt="Doppelzimmer Sutherland im Erdgeschoss" width="480" height="360" loading="lazy"><span class="room-cat">Doppelzimmer · Erdgeschoss</span><span class="strip-name">Sutherland</span></a></li>
+        <li><a href="#room-mathieson" data-room="room-mathieson"><img src="../img/room-mathieson-480.webp" alt="Zweibettzimmer mit zwei Einzelbetten Mathieson im Erdgeschoss" width="480" height="360" loading="lazy"><span class="room-cat">Zweibettzimmer mit zwei Einzelbetten · Erdgeschoss</span><span class="strip-name">Mathieson</span></a></li>
+        <li><a href="#room-butterfly" data-room="room-butterfly"><img src="../img/butterfly-winter-480.webp" alt="Butterfly Cottage im Winter" width="480" height="360" loading="lazy"><span class="room-cat">Selbstverpflegung</span><span class="strip-name">Butterfly Cottage</span></a></li>
+      </ul>
+      <div class="rooms-more" id="rooms-more">
       <div class="rooms-grid">
-        <article class="room-card">
+        <article class="room-card" id="room-grant">
           <img src="../img/room-grant-800.webp" srcset="../img/room-grant-480.webp 480w, ../img/room-grant-800.webp 800w" sizes="(min-width: 1020px) 360px, (min-width: 760px) 45vw, 92vw" alt="Zimmer Grant mit King-Size-Bett" width="800" height="600" loading="lazy">
           <div class="room-body">
             <p class="room-cat gold">Deluxe</p>
@@ -275,7 +285,7 @@
             <a class="btn btn-primary btn-sm" href="https://portal.freetobook.com/reservations?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">Verfügbarkeit prüfen</a>
           </div>
         </article>
-        <article class="room-card">
+        <article class="room-card" id="room-macdonald">
           <img src="../img/room-macdonald-800.webp" srcset="../img/room-macdonald-480.webp 480w, ../img/room-macdonald-800.webp 800w" sizes="(min-width: 1020px) 360px, (min-width: 760px) 45vw, 92vw" alt="Zimmer MacDonald mit Super-King-Size-Bett" width="800" height="600" loading="lazy">
           <div class="room-body">
             <p class="room-cat gold">Superior</p>
@@ -288,7 +298,7 @@
             <a class="btn btn-primary btn-sm" href="https://portal.freetobook.com/reservations?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">Verfügbarkeit prüfen</a>
           </div>
         </article>
-        <article class="room-card">
+        <article class="room-card" id="room-fraser">
           <img src="../img/room-fraser-800.webp" srcset="../img/room-fraser-480.webp 480w, ../img/room-fraser-800.webp 800w" sizes="(min-width: 1020px) 360px, (min-width: 760px) 45vw, 92vw" alt="Doppelzimmer Fraser mit Holzbett" width="800" height="637" loading="lazy">
           <div class="room-body">
             <p class="room-cat">Doppelzimmer</p>
@@ -301,7 +311,7 @@
             <a class="btn btn-primary btn-sm" href="https://portal.freetobook.com/reservations?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">Verfügbarkeit prüfen</a>
           </div>
         </article>
-        <article class="room-card">
+        <article class="room-card" id="room-mackay">
           <img src="../img/room-mackay-800.webp" srcset="../img/room-mackay-480.webp 480w, ../img/room-mackay-800.webp 800w" sizes="(min-width: 1020px) 360px, (min-width: 760px) 45vw, 92vw" alt="Zimmer MacKay, Zweibettzimmer mit zwei Einzelbetten" width="800" height="600" loading="lazy">
           <div class="room-body">
             <p class="room-cat">Zweibettzimmer mit zwei Einzelbetten</p>
@@ -314,7 +324,7 @@
             <a class="btn btn-primary btn-sm" href="https://portal.freetobook.com/reservations?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">Verfügbarkeit prüfen</a>
           </div>
         </article>
-        <article class="room-card">
+        <article class="room-card" id="room-sutherland">
           <img src="../img/room-sutherland-800.webp" srcset="../img/room-sutherland-480.webp 480w, ../img/room-sutherland-800.webp 800w" sizes="(min-width: 1020px) 360px, (min-width: 760px) 45vw, 92vw" alt="Doppelzimmer Sutherland im Erdgeschoss" width="800" height="600" loading="lazy">
           <div class="room-body">
             <p class="room-cat">Doppelzimmer · Erdgeschoss</p>
@@ -327,7 +337,7 @@
             <a class="btn btn-primary btn-sm" href="https://portal.freetobook.com/reservations?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">Verfügbarkeit prüfen</a>
           </div>
         </article>
-        <article class="room-card">
+        <article class="room-card" id="room-mathieson">
           <img src="../img/room-mathieson-800.webp" srcset="../img/room-mathieson-480.webp 480w, ../img/room-mathieson-800.webp 800w" sizes="(min-width: 1020px) 360px, (min-width: 760px) 45vw, 92vw" alt="Zimmer Mathieson, Zweibettzimmer mit zwei Einzelbetten" width="800" height="600" loading="lazy">
           <div class="room-body">
             <p class="room-cat">Zweibettzimmer mit zwei Einzelbetten · Erdgeschoss</p>
@@ -344,7 +354,7 @@
 
       <p class="rates-note">Die Zimmerpreise hängen von Saison, Zimmer und Aufenthaltsdauer ab, und bei längeren Aufenthalten werden Sie von unseren Preisen vielleicht positiv überrascht. Die aktuellen Preise sehen Sie, wenn Sie die Verfügbarkeit prüfen.</p>
 
-      <article class="cottage-card">
+      <article class="cottage-card" id="room-butterfly">
         <div class="cottage-text">
           <p class="eyebrow">Unser Cottage</p>
           <h3>Butterfly Cottage, Ferienhaus für zwei</h3>
@@ -356,6 +366,9 @@
           <p class="licence">Lizenz Secondary Letting HI-70001-R</p>
         </div>
       </article>
+
+      </div>
+      <p class="rooms-toggle-wrap"><button class="btn btn-outline rooms-toggle" type="button" aria-expanded="false" aria-controls="rooms-more" data-label-open="Mehr zu den Zimmern" data-label-close="Weniger zu den Zimmern">Mehr zu den Zimmern</button></p>
 
       <div class="groups">
         <h3>Längere Aufenthalte, Gruppen und das ganze Haus</h3>
@@ -829,6 +842,6 @@
   </svg>
 </button>
 
-<script src="../assets/site.js?v=18" defer></script>
+<script src="../assets/site.js?v=19" defer></script>
 </body>
 </html>

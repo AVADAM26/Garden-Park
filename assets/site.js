@@ -243,3 +243,26 @@ document.querySelectorAll('.m-toggle').forEach(function (btn) {
   check();
   whenAway(sc, zero);
 })();
+
+// Zimmer: "More room details" klappt die ausführlichen Zimmerkarten auf, ein Klick auf ein Zimmer öffnet direkt dort
+(function () {
+  var sec = document.getElementById('rooms'), more = document.getElementById('rooms-more');
+  var btn = sec && sec.querySelector('.rooms-toggle'); if (!more || !btn) return;
+  function set(open) {
+    more.classList.toggle('open', open); sec.classList.toggle('details-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = btn.getAttribute(open ? 'data-label-close' : 'data-label-open');
+  }
+  btn.addEventListener('click', function () {
+    var open = !more.classList.contains('open'); set(open);
+    if (!open) sec.scrollIntoView({ block: 'start' });
+  });
+  sec.querySelectorAll('.rooms-strip a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault(); set(true);
+      var t = document.getElementById(a.getAttribute('data-room'));
+      if (t) t.scrollIntoView({ block: 'center' });
+    });
+  });
+  if (/^#room-/.test(location.hash)) { set(true); var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView({ block: 'center' }); }
+})();
