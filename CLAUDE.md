@@ -22,8 +22,11 @@ Der heutige Look von garden-park.co.uk gefällt Daniel und bleibt: dunkle Menül
 
 Pflicht in jedem Projekt: Hell/Dunkel-Modus, Geschwindigkeit immer mit Google PageSpeed Insights (pagespeed.web.dev) prüfen bzw. vor dem Start lokal mit Lighthouse (gleiche Messung, Handy und Computer), keine teuren CSS-Filter wie grosse blur() auf Bildern (lieber vorberechnete Bilder), Back-to-Top mit eigenem, überraschendem Motiv (Daniels Markenzeichen), PageSpeed auf Maximum, Footer „Website by AVADAM“ mit Link auf https://avadam26.github.io/avadam/.
 
-- **Gold ist am Maximum** (Stand 25.11.2026): Deluxe/Superior, Goldkacheln in Faktenleiste und Bewertungen (Good to know seit 25.11. bewusst ohne Gold, war zu viel), Frühstücksteller mit Goldrahmen. Wünscht Daniel mehr Gold, ihn zuerst daran erinnern, nicht einfach umsetzen.
-- Auf dem Handy sind Packages & news, die sechs Kacheln bei The area, Good to know und die Galerie (zeigt nur das Haus bei Nacht) zum Aufklappen (`.m-collapsible` und `.m-toggle`). Am Computer ist alles offen.
+- **Gold ist am Maximum** (Stand 26.11.2026): Deluxe/Superior, Goldkacheln in der Faktenleiste, die grosse goldene 5 bei den Bewertungen, Frühstücksteller mit Goldrahmen. Good to know und die Bewertungskacheln sind bewusst ohne Gold; die Bewertungskacheln funkeln nur beim Darüberfahren (Champagner-Glanz). Wünscht Daniel mehr Gold, ihn zuerst daran erinnern, nicht einfach umsetzen.
+- Auf dem Handy sind Packages & news, die sechs Kacheln bei The area und die Galerie (zeigt nur das Haus bei Nacht) zum Aufklappen (`.m-collapsible` und `.m-toggle`). Am Computer ist alles offen.
+- Good to know ist eine kompakte Liste (Name und kurzer Wert), ein Klick zeigt rechts den Text mit grossem grünem Wert und Untertitel; am Anfang ist Opening times offen. Auf dem Handy öffnet sich der Text unter der Zeile.
+- Bewegung beim Scrollen: Galeriefotos werden von links eingeschoben, die 5 und die Balken bei den Bewertungen zählen von 0 hoch. Nur mit `translate`/`opacity`, damit nichts springt (CLS 0), und aus bei „reduzierte Bewegung“.
+- Kartenkachel bei The area ohne Kachel-Schatten, nur feiner Rahmen in der Farbe von „Open the map“. Getting here bei Kontakt ohne Kachel, mit feiner Linie.
 
 ## Technik
 

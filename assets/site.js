@@ -128,7 +128,7 @@
 // Handy und Tablet (kein Hover): Goldkacheln glänzen einmal, wenn sie ins Bild kommen, und bei jedem Antippen
 (function () {
   if (!window.matchMedia || !matchMedia('(hover: none)').matches) return;
-  var cards = document.querySelectorAll('.gold-card');
+  var cards = document.querySelectorAll('.gold-card, .quote');
   function shine(el) {
     el.classList.remove('shine'); void el.offsetWidth;
     el.classList.add('shine');
@@ -160,4 +160,62 @@ document.querySelectorAll('.m-toggle').forEach(function (btn) {
   var d = document.querySelector('.nav-lang'); if (!d) return;
   document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+})();
+
+// Good to know: eine Zeile anklicken zeigt ihren Text, immer genau eine ist offen
+(function () {
+  var list = document.getElementById('gtk-list'); if (!list) return;
+  var rows = list.querySelectorAll('.gtk-row');
+  rows.forEach(function (row) {
+    var btn = row.querySelector('button');
+    btn.addEventListener('click', function () {
+      rows.forEach(function (r) {
+        var b = r.querySelector('button'), on = r === row;
+        r.classList.toggle('active', on);
+        b.setAttribute('aria-expanded', on ? 'true' : 'false');
+        document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+      });
+    });
+  });
+})();
+
+// Galerie einschieben und Bewertungen hochzählen, nur wenn keine reduzierte Bewegung gewünscht ist
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var g = document.querySelector('.gallery');
+  if (g) {
+    var imgs = g.querySelectorAll('img');
+    g.classList.add('slide');
+    var gi = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); gi.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    imgs.forEach(function (im, i) { im.style.transitionDelay = (i % 3) * 0.12 + 's'; gi.observe(im); });
+  }
+  var sc = document.querySelector('.score'); if (!sc) return;
+  var nums = [];
+  var big = sc.querySelector('.score-num'); if (big) nums.push(big);
+  sc.querySelectorAll('.score-bars dd b').forEach(function (b) { nums.push(b); });
+  var targets = nums.map(function (n) { return n.textContent; });
+  nums.forEach(function (n) { n.textContent = n.textContent.replace(/[0-9]/g, '0'); });
+  sc.classList.add('wait');
+  var started = false;
+  function start() {
+    if (started) return; started = true;
+    window.removeEventListener('scroll', check);
+    void sc.offsetWidth; sc.classList.remove('wait');
+    var t0 = performance.now(), dur = 1600;
+    (function step(t) {
+      var k = Math.min(1, Math.max(0, (t - t0) / dur)), e = 1 - Math.pow(1 - k, 3);
+      nums.forEach(function (n, i) {
+        var txt = targets[i], sep = txt.indexOf(',') > -1 ? ',' : '.';
+        var val = parseFloat(txt.replace(',', '.')), dec = (txt.split(/[.,]/)[1] || '').length;
+        n.textContent = k < 1 ? (val * e).toFixed(dec).replace('.', sep) : txt;
+      });
+      if (k < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+  function check() { if (sc.getBoundingClientRect().top < window.innerHeight * 0.85) start(); }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
 })();

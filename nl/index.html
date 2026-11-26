@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/hero-hosts-1600.webp" as="image" imagesrcset="../img/hero-hosts-800.webp 800w, ../img/hero-hosts-1600.webp 1600w, ../img/hero-hosts-2200.webp 2200w" imagesizes="100vw">
-<link rel="stylesheet" href="../assets/site.css?v=43">
+<link rel="stylesheet" href="../assets/site.css?v=45">
 <script>
   try { var t = localStorage.getItem('gp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -549,22 +549,30 @@
         <h2 id="gtk-title">Alles voordat u boekt</h2>
         <p>Geen verrassingen, geen kleine lettertjes verstopt in een pdf. Wilt u iets bespreken, bel of schrijf ons gerust.</p>
       </div>
-      <div id="m-gtk" class="m-collapsible gtk-grid">
-        <div class="gtk">
-          <h3>Openingstijden</h3>
+      <div class="gtk-list" id="gtk-list">
+        <h3 class="gtk-row active"><button type="button" id="gtk-b1" aria-expanded="true" aria-controls="gtk-p1"><span class="gtk-name">Openingstijden</span><span class="gtk-val">Maart – oktober</span></button></h3>
+        <div class="gtk-panel" id="gtk-p1" role="region" aria-labelledby="gtk-b1">
+          <p class="gtk-big">Maart – oktober</p>
+          <p class="gtk-sub">en van 26 december tot 4 januari</p>
           <p>We zijn open van maart tot oktober, en van 26 december tot 4 januari rond Kerst en Oud en Nieuw. Verder is het huis van november tot februari gesloten, omdat ons oude granieten huis lang nodig heeft om warm te worden.</p>
           <p>Op verzoek openen we het huis in de winter voor groepen van minstens zes personen die minimaal drie nachten blijven.</p>
         </div>
-        <div class="gtk">
-          <h3>Reserveren en betalen</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b2" aria-expanded="false" aria-controls="gtk-p2"><span class="gtk-name">Reserveren en betalen</span><span class="gtk-val">1e nacht</span></button></h3>
+        <div class="gtk-panel" id="gtk-p2" role="region" aria-labelledby="gtk-b2" hidden>
+          <p class="gtk-big">1e nacht</p>
+          <p class="gtk-sub">aanbetaling per kamer</p>
           <p>Boekingen worden bevestigd met een aanbetaling voor de eerste nacht per kamer. We accepteren contant geld (GBP), Mastercard en Visa, overschrijving en Stripe-betaallinks. Contactloos betalen is ook mogelijk.</p>
         </div>
-        <div class="gtk">
-          <h3>In- en uitchecken</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b3" aria-expanded="false" aria-controls="gtk-p3"><span class="gtk-name">In- en uitchecken</span><span class="gtk-val">16 – 19 uur</span></button></h3>
+        <div class="gtk-panel" id="gtk-p3" role="region" aria-labelledby="gtk-b3" hidden>
+          <p class="gtk-big">16 – 19 uur</p>
+          <p class="gtk-sub">uitchecken voor 10 uur</p>
           <p>Inchecken kan tussen 16 en 19 uur, uitchecken tot 10 uur. Elke dag kiest u uw ontbijt en het tijdstip op onze ontbijtkaart.</p>
         </div>
-        <div class="gtk">
-          <h3>Annulering</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b4" aria-expanded="false" aria-controls="gtk-p4"><span class="gtk-name">Annulering</span><span class="gtk-val">vanaf £14</span></button></h3>
+        <div class="gtk-panel" id="gtk-p4" role="region" aria-labelledby="gtk-b4" hidden>
+          <p class="gtk-big">vanaf £14</p>
+          <p class="gtk-sub">per kamer</p>
           <p>Als u 14 of meer dagen voor aankomst annuleert, zijn de annuleringskosten £14 per kamer.</p>
           <p>Als u tussen 3 en 13 dagen voor aankomst annuleert, zijn de annuleringskosten £50 per kamer.</p>
           <p>Als u minder dan 3 dagen voor aankomst annuleert, zijn de annuleringskosten 75% van het totale boekingsbedrag.</p>
@@ -572,29 +580,38 @@
           <p>Bij boekingen boven £1,000 is de aanbetaling 40%. Boekingen 4 dagen of minder voor aankomst worden volledig betaald en niet terugbetaald.</p>
           <p>We raden een reisverzekering sterk aan.</p>
         </div>
-        <div class="gtk">
-          <h3>Toegankelijkheid</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b5" aria-expanded="false" aria-controls="gtk-p5"><span class="gtk-name">Toegankelijkheid</span><span class="gtk-val">12 treden</span></button></h3>
+        <div class="gtk-panel" id="gtk-p5" role="region" aria-labelledby="gtk-b5" hidden>
+          <p class="gtk-big">12 treden</p>
+          <p class="gtk-sub">of een licht oplopend voetpad</p>
           <p>Het huis ligt iets verhoogd, ongeveer 30 meter van de weg. U bereikt de ingang via een licht oplopend voetpad of via 12 lage treden. Het huis is niet toegankelijk voor rolstoelen.</p>
           <p>Gasten met een rollator of loophulp kunnen de begane grond bereiken, en we raden de kamer Sutherland aan, met inloopdouche. De kamer Mathieson ligt ook op de begane grond, maar de douche heeft een opstapje van 15 cm.</p>
         </div>
-        <div class="gtk">
-          <h3>Honden</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b6" aria-expanded="false" aria-controls="gtk-p6"><span class="gtk-name">Honden</span><span class="gtk-val">£39</span></button></h3>
+        <div class="gtk-panel" id="gtk-p6" role="region" aria-labelledby="gtk-b6" hidden>
+          <p class="gtk-big">£39</p>
+          <p class="gtk-sub">in Butterfly Cottage</p>
           <p>Reist u met uw hond? In Butterfly Cottage is hij van harte welkom, daar heeft de hele familie ruimte om zich thuis te voelen. De toeslag is £39 per boeking, per week.</p>
         </div>
-        <div class="gtk">
-          <h3>Wandelaars, fietsers en golfers</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b7" aria-expanded="false" aria-controls="gtk-p7"><span class="gtk-name">Wandelaars, fietsers en golfers</span><span class="gtk-val">tot 14</span></button></h3>
+        <div class="gtk-panel" id="gtk-p7" role="region" aria-labelledby="gtk-b7" hidden>
+          <p class="gtk-big">tot 14</p>
+          <p class="gtk-sub">gasten in een groep</p>
           <p>Droogruimte en afsluitbare berging ter plaatse, en we zijn het Guest House dat het dichtst bij de Speyside Way ligt. Bagagevervoer naar uw volgende accommodatie kunnen we regelen, vraag het ons gewoon voor uw aankomst. Groepen tot 14 personen zijn welkom in overleg.</p>
         </div>
-        <div class="gtk">
-          <h3>Kinderen</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b8" aria-expanded="false" aria-controls="gtk-p8"><span class="gtk-name">Kinderen</span><span class="gtk-val">8 +</span></button></h3>
+        <div class="gtk-panel" id="gtk-p8" role="region" aria-labelledby="gtk-b8" hidden>
+          <p class="gtk-big">8 +</p>
+          <p class="gtk-sub">jaar en ouder</p>
           <p>Kinderen vanaf 8 jaar zijn welkom in Garden Park. Voor kinderen van 8 tot 15 jaar gelden verlaagde tarieven.</p>
         </div>
-        <div class="gtk">
-          <h3>Comfort</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b9" aria-expanded="false" aria-controls="gtk-p9"><span class="gtk-name">Comfort</span><span class="gtk-val">Houtkachel</span></button></h3>
+        <div class="gtk-panel" id="gtk-p9" role="region" aria-labelledby="gtk-b9" hidden>
+          <p class="gtk-big">Houtkachel</p>
+          <p class="gtk-sub">in de gastenlounge</p>
           <p>Elke kamer heeft gratis thee en koffie, verzorgingsproducten in de badkamer, een tv en een föhn. U bent van harte welkom in onze zitkamer voor Gasten, waar u bordspellen, boeken en informatie over de omgeving vindt. Op koudere dagen houdt de houtkachel de kamer warm en gezellig.</p>
         </div>
       </div>
-      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-gtk" data-label-open="Alles voordat u boekt tonen" data-label-close="Minder tonen">Alles voordat u boekt tonen</button>
     </div>
   </section>
 
@@ -648,21 +665,21 @@
       <h2 id="reviews-title" class="strong">Wat onze Gasten zeggen</h2>
       <div class="score">
         <div>
-          <p class="score-big">5<span>/ 5</span></p>
+          <p class="score-big"><span class="score-num">5</span><span>/ 5</span></p>
           <p class="score-sub">Uit meer dan 240 geverifieerde beoordelingen · <a href="https://www.freetobook.com/reviews/all?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">lees ze allemaal</a></p>
         </div>
         <dl class="score-bars">
-          <div><dt>Netheid</dt><dd><span style="--v:100%"></span>5.0</dd></div>
-          <div><dt>Service</dt><dd><span style="--v:100%"></span>5.0</dd></div>
-          <div><dt>Faciliteiten</dt><dd><span style="--v:98%"></span>4.9</dd></div>
-          <div><dt>Ligging</dt><dd><span style="--v:100%"></span>5.0</dd></div>
+          <div><dt>Netheid</dt><dd><span style="--v:100%"></span><b>5.0</b></dd></div>
+          <div><dt>Service</dt><dd><span style="--v:100%"></span><b>5.0</b></dd></div>
+          <div><dt>Faciliteiten</dt><dd><span style="--v:98%"></span><b>4.9</b></dd></div>
+          <div><dt>Ligging</dt><dd><span style="--v:100%"></span><b>5.0</b></dd></div>
         </dl>
       </div>
       <div class="quotes">
         <figure class="quote"><blockquote><p>“Spotlessly clean, peaceful location just a very short walk to facilities. Host very welcoming and helpful.”</p></blockquote><figcaption>Gast uit Inverness · november 2026</figcaption></figure>
-        <figure class="quote gold-card"><blockquote><p>“The breakfast was first-class, the hosts were welcoming and friendly.”</p></blockquote><figcaption>Gast uit Düsseldorf · november 2026</figcaption></figure>
+        <figure class="quote"><blockquote><p>“The breakfast was first-class, the hosts were welcoming and friendly.”</p></blockquote><figcaption>Gast uit Düsseldorf · november 2026</figcaption></figure>
         <figure class="quote"><blockquote lang="de"><p>„Würden euch jeder Zeit weiter empfehlen. Es waren schöne Tage, die wir sehr genossen haben.“</p></blockquote><figcaption>Gast uit Dozwil · oktober 2026</figcaption></figure>
-        <figure class="quote gold-card"><blockquote lang="de"><p>„Wir vermissen euer Frühstück mit der tollen Auswahl und dem selbstgebackenen Brot. Und eure Herzlichkeit …“</p></blockquote><figcaption>Gast uit Frenkendorf · september 2026</figcaption></figure>
+        <figure class="quote"><blockquote lang="de"><p>„Wir vermissen euer Frühstück mit der tollen Auswahl und dem selbstgebackenen Brot. Und eure Herzlichkeit …“</p></blockquote><figcaption>Gast uit Frenkendorf · september 2026</figcaption></figure>
       </div>
       <div class="review-links">
         <a class="btn btn-outline" href="https://www.freetobook.com/reviews/all?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">Onze directe beoordelingen</a>
@@ -812,6 +829,6 @@
   </svg>
 </button>
 
-<script src="../assets/site.js?v=15" defer></script>
+<script src="../assets/site.js?v=16" defer></script>
 </body>
 </html>

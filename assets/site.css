@@ -146,7 +146,8 @@ p { margin: 0 0 1.1em; }
 .section-dark .eyebrow { color: var(--green-brand); }
 .eyebrow::after { content: ""; display: block; width: 44px; height: 2px; background: var(--green-brand); margin-top: 10px; }
 .center .eyebrow::after { margin-inline: auto; }
-.section-head { max-width: 760px; margin-bottom: 40px; }
+.section-head { margin-bottom: 40px; }
+.section-head > p { max-width: 760px; }
 .section-head.center { margin-inline: auto; }
 .split { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .split-reverse .split-media { order: -1; }
@@ -515,9 +516,74 @@ h2.strong { font-weight: 500; }
 .map-tile-title { font-size: 1.1rem; font-weight: 600; }
 .map-tile-text { font-size: .96rem; color: var(--muted); }
 .map-tile-link { font-size: .96rem; color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
-.map-tile-credit { font-size: .7rem; color: var(--muted); opacity: .8; margin-top: 4px; }
+.map-tile-credit { font-size: .74rem; color: var(--muted); margin-top: 4px; }
 @media (max-width: 1020px) {
   .area-top { grid-template-columns: 1fr; }
   .area-top .section-head { grid-column: auto; }
   .map-tile { max-width: 520px; }
 }
+
+/* 26.11.: Knöpfe in den Angeboten in der Mitte */
+.offer-card > .btn:last-child, .offer-body > .btn:last-child { align-self: center; }
+
+/* Kartenkachel: keine Kachel mehr, nur ein feiner Rahmen in der Farbe von "Open the map" */
+.map-tile { background: transparent; box-shadow: none; border: 1.5px solid var(--green); border-radius: var(--radius); }
+.map-tile:hover { transform: none; border-color: var(--green-brand); }
+.map-tile:hover .map-tile-link { color: var(--green-brand); }
+
+/* Good to know: kompakte Liste links, Text rechts. Am Anfang ist Opening times offen */
+.gtk-list { display: grid; grid-template-columns: minmax(300px, 400px) 1fr; column-gap: 72px; align-items: start; }
+.gtk-row { grid-column: 1; margin: 0; font-size: 1rem; border-bottom: 1px solid var(--line); }
+.gtk-row:first-of-type { border-top: 1px solid var(--line); }
+.gtk-row button { all: unset; box-sizing: border-box; width: 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 15px 0; cursor: pointer; font-family: inherit; }
+.gtk-name { font-weight: 600; font-size: 1.05rem; color: var(--text); }
+.gtk-val { color: var(--muted); font-size: 1rem; white-space: nowrap; text-align: right; }
+.gtk-row button:hover .gtk-name { color: var(--green); }
+.gtk-row button:focus-visible { outline: 2px solid var(--green-brand); outline-offset: 2px; }
+.gtk-row.active { border-left: 3px solid var(--green-brand); }
+.gtk-row.active button { padding-left: 14px; }
+.gtk-row.active .gtk-val { color: var(--green); }
+.gtk-panel { grid-column: 2; grid-row: 1 / span 9; }
+.gtk-panel[hidden] { display: none; }
+.gtk-big { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.1; color: var(--green); margin: 0 0 10px; }
+.gtk-sub { text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; color: var(--muted); margin: 0 0 26px; }
+.gtk-panel p:not(.gtk-big):not(.gtk-sub) { color: var(--muted); max-width: 620px; }
+@media (max-width: 900px) {
+  .gtk-list { grid-template-columns: 1fr; }
+  .gtk-panel { grid-column: 1; grid-row: auto; padding: 6px 0 22px 17px; border-left: 3px solid var(--green-brand); border-bottom: 1px solid var(--line); }
+  .gtk-row.active { border-bottom: 0; }
+  .gtk-big { font-size: 2rem; }
+  .gtk-sub { margin-bottom: 16px; }
+}
+
+/* Galerie: Fotos werden beim Hinscrollen von links eingeschoben (nur verschieben, kein Layout-Sprung) */
+.gallery.slide img { opacity: 0; translate: -48px 0; transition: opacity .7s ease, translate .7s ease; }
+.gallery.slide img.in { opacity: 1; translate: 0 0; }
+
+/* Bewertungen: grosse 5 in Gold, zählt hoch; Balken füllen sich */
+.score-big { font-weight: 500; }
+.score-num { background: linear-gradient(100deg, #b8932f, #d4b257 45%, #9c7a26); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@property --p { syntax: '<percentage>'; inherits: false; initial-value: 100%; }
+.score-bars dd span { --p: var(--v); background: linear-gradient(90deg, var(--green-brand) var(--p), var(--line) var(--p)); transition: --p 1.6s ease; }
+.score.wait .score-bars dd span { --p: 0%; transition: none; }
+
+/* Bewertungen funkeln beim Darüberfahren wie Champagner */
+.quote { position: relative; overflow: hidden; isolation: isolate; transition: border-color .4s, box-shadow .4s; }
+.quote::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(115deg, transparent 30%, rgba(246, 231, 166, .55) 45%, transparent 60%); transform: translateX(-100%); transition: transform 1.2s ease; }
+.quote::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; transition: opacity .4s;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(212,178,87,.9) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 78% 18%, rgba(246,231,166,.95) 0 2px, transparent 3px),
+    radial-gradient(circle at 62% 70%, rgba(212,178,87,.85) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 30% 82%, rgba(246,231,166,.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 90% 60%, rgba(212,178,87,.8) 0 1px, transparent 2px); }
+.quote:hover, .quote.shine { border-color: #d4b257; box-shadow: 0 14px 30px -18px rgba(156, 122, 38, .45); }
+.quote:hover::after, .quote.shine::after { transform: translateX(100%); }
+.quote:hover::before, .quote.shine::before { opacity: 1; animation: twinkle 1.6s ease-in-out infinite; }
+@keyframes twinkle { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+
+/* Kontakt: Getting here ohne Kachel, mit feiner Linie */
+.contact-note { background: none; box-shadow: none; border-radius: 0; padding: 0 0 0 32px; border-left: 1px solid var(--line); }
+@media (max-width: 760px) { .contact-note { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--line); } }
+.score-big .score-num { font-size: inherit; margin: 0; color: transparent; font-weight: 600; }
+.score-bars dd b { font-weight: inherit; min-width: 2.2em; }

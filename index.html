@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/hero-hosts-1600.webp" as="image" imagesrcset="img/hero-hosts-800.webp 800w, img/hero-hosts-1600.webp 1600w, img/hero-hosts-2200.webp 2200w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/site.css?v=43">
+<link rel="stylesheet" href="assets/site.css?v=45">
 <script>
   try { var t = localStorage.getItem('gp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -549,22 +549,30 @@
         <h2 id="gtk-title">Everything before you book</h2>
         <p>No surprises, no small print buried in a PDF. If anything here needs discussing, simply call or write to us.</p>
       </div>
-      <div id="m-gtk" class="m-collapsible gtk-grid">
-        <div class="gtk">
-          <h3>Opening times</h3>
+      <div class="gtk-list" id="gtk-list">
+        <h3 class="gtk-row active"><button type="button" id="gtk-b1" aria-expanded="true" aria-controls="gtk-p1"><span class="gtk-name">Opening times</span><span class="gtk-val">March – October</span></button></h3>
+        <div class="gtk-panel" id="gtk-p1" role="region" aria-labelledby="gtk-b1">
+          <p class="gtk-big">March – October</p>
+          <p class="gtk-sub">and 26 December to 4 January</p>
           <p>We are open from March to October, and from 26 December to 4 January over Christmas and New Year. The house is closed at other times from November to February, as our old granite house takes a long time to heat.</p>
           <p>On request, we can open the house in winter for groups of at least six people staying a minimum of three nights.</p>
         </div>
-        <div class="gtk">
-          <h3>Reservations and payment</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b2" aria-expanded="false" aria-controls="gtk-p2"><span class="gtk-name">Reservations and payment</span><span class="gtk-val">1st night</span></button></h3>
+        <div class="gtk-panel" id="gtk-p2" role="region" aria-labelledby="gtk-b2" hidden>
+          <p class="gtk-big">1st night</p>
+          <p class="gtk-sub">deposit per room</p>
           <p>Bookings are confirmed with a deposit for the first night per room. We accept cash (GBP), Mastercard and Visa, bank transfer and Stripe payment links. Contactless payment is also possible.</p>
         </div>
-        <div class="gtk">
-          <h3>Check-in and check-out</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b3" aria-expanded="false" aria-controls="gtk-p3"><span class="gtk-name">Check-in and check-out</span><span class="gtk-val">4 – 7pm</span></button></h3>
+        <div class="gtk-panel" id="gtk-p3" role="region" aria-labelledby="gtk-b3" hidden>
+          <p class="gtk-big">4 – 7pm</p>
+          <p class="gtk-sub">check-out by 10am</p>
           <p>Check-in is between 4pm and 7pm, check-out by 10am. Each day you choose your breakfast and your preferred time on our breakfast card.</p>
         </div>
-        <div class="gtk">
-          <h3>Cancellation</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b4" aria-expanded="false" aria-controls="gtk-p4"><span class="gtk-name">Cancellation</span><span class="gtk-val">from £14</span></button></h3>
+        <div class="gtk-panel" id="gtk-p4" role="region" aria-labelledby="gtk-b4" hidden>
+          <p class="gtk-big">from £14</p>
+          <p class="gtk-sub">per room</p>
           <p>If you cancel 14 or more days before arrival, the cancellation charge is £14 per room.</p>
           <p>If you cancel between 3 and 13 days before arrival, the cancellation charge is £50 per room.</p>
           <p>If you cancel less than 3 days before arrival, the cancellation charge is 75% of the total booking cost.</p>
@@ -572,29 +580,38 @@
           <p>For bookings over £1,000 the deposit is 40%. Bookings made 4 days or less before arrival are paid in full and cannot be refunded.</p>
           <p>We strongly recommend travel insurance.</p>
         </div>
-        <div class="gtk">
-          <h3>Accessibility</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b5" aria-expanded="false" aria-controls="gtk-p5"><span class="gtk-name">Accessibility</span><span class="gtk-val">12 steps</span></button></h3>
+        <div class="gtk-panel" id="gtk-p5" role="region" aria-labelledby="gtk-b5" hidden>
+          <p class="gtk-big">12 steps</p>
+          <p class="gtk-sub">or a gentle footpath</p>
           <p>The house is slightly raised, about 30 metres from the road. You can reach the entrance by a gentle footpath or by 12 shallow steps. The house is not wheelchair accessible.</p>
           <p>Guests using a rollator or walking aid can access the ground floor, and we recommend Room Sutherland, which has a walk-in shower. Room Mathieson is also on the ground floor, but its shower has a 15 cm step.</p>
         </div>
-        <div class="gtk">
-          <h3>Dogs</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b6" aria-expanded="false" aria-controls="gtk-p6"><span class="gtk-name">Dogs</span><span class="gtk-val">£39</span></button></h3>
+        <div class="gtk-panel" id="gtk-p6" role="region" aria-labelledby="gtk-b6" hidden>
+          <p class="gtk-big">£39</p>
+          <p class="gtk-sub">in Butterfly Cottage</p>
           <p>Travelling with your dog? They are very welcome in Butterfly Cottage, where there is room for the whole family to feel at home. A pet fee of £39 applies per booking, per week.</p>
         </div>
-        <div class="gtk">
-          <h3>Walkers, cyclists and golfers</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b7" aria-expanded="false" aria-controls="gtk-p7"><span class="gtk-name">Walkers, cyclists and golfers</span><span class="gtk-val">up to 14</span></button></h3>
+        <div class="gtk-panel" id="gtk-p7" role="region" aria-labelledby="gtk-b7" hidden>
+          <p class="gtk-big">up to 14</p>
+          <p class="gtk-sub">Guests in a group</p>
           <p>Drying facilities and lockable storage on site, and we are the Guest House closest to the Speyside Way. Luggage transfer to your next accommodation can be arranged, just ask us before you arrive. Groups of up to 14 are welcome by arrangement.</p>
         </div>
-        <div class="gtk">
-          <h3>Children</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b8" aria-expanded="false" aria-controls="gtk-p8"><span class="gtk-name">Children</span><span class="gtk-val">8 +</span></button></h3>
+        <div class="gtk-panel" id="gtk-p8" role="region" aria-labelledby="gtk-b8" hidden>
+          <p class="gtk-big">8 +</p>
+          <p class="gtk-sub">years and over</p>
           <p>Children aged 8 and over are welcome at Garden Park. Reduced rates are available for children aged 8 to 15.</p>
         </div>
-        <div class="gtk">
-          <h3>Comfort</h3>
+        <h3 class="gtk-row"><button type="button" id="gtk-b9" aria-expanded="false" aria-controls="gtk-p9"><span class="gtk-name">Comfort</span><span class="gtk-val">Log stove</span></button></h3>
+        <div class="gtk-panel" id="gtk-p9" role="region" aria-labelledby="gtk-b9" hidden>
+          <p class="gtk-big">Log stove</p>
+          <p class="gtk-sub">in the residents' lounge</p>
           <p>Every room has a complimentary beverage tray, bathroom toiletries, a TV and a hairdryer. You are very welcome to spend time in our residents' lounge, where you will find board games, books and information about the local area. On colder days, the log-burning stove keeps the room warm and cosy.</p>
         </div>
       </div>
-      <button class="m-toggle" type="button" aria-expanded="false" aria-controls="m-gtk" data-label-open="Show everything before you book" data-label-close="Show less">Show everything before you book</button>
     </div>
   </section>
 
@@ -648,21 +665,21 @@
       <h2 id="reviews-title" class="strong">What our Guests say</h2>
       <div class="score">
         <div>
-          <p class="score-big">5<span>/ 5</span></p>
+          <p class="score-big"><span class="score-num">5</span><span>/ 5</span></p>
           <p class="score-sub">From 240+ verified Guest reviews · <a href="https://www.freetobook.com/reviews/all?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">read them all</a></p>
         </div>
         <dl class="score-bars">
-          <div><dt>Cleanliness</dt><dd><span style="--v:100%"></span>5.0</dd></div>
-          <div><dt>Service</dt><dd><span style="--v:100%"></span>5.0</dd></div>
-          <div><dt>Facilities</dt><dd><span style="--v:98%"></span>4.9</dd></div>
-          <div><dt>Location</dt><dd><span style="--v:100%"></span>5.0</dd></div>
+          <div><dt>Cleanliness</dt><dd><span style="--v:100%"></span><b>5.0</b></dd></div>
+          <div><dt>Service</dt><dd><span style="--v:100%"></span><b>5.0</b></dd></div>
+          <div><dt>Facilities</dt><dd><span style="--v:98%"></span><b>4.9</b></dd></div>
+          <div><dt>Location</dt><dd><span style="--v:100%"></span><b>5.0</b></dd></div>
         </dl>
       </div>
       <div class="quotes">
         <figure class="quote"><blockquote><p>“Spotlessly clean, peaceful location just a very short walk to facilities. Host very welcoming and helpful.”</p></blockquote><figcaption>Guest from Inverness · November 2026</figcaption></figure>
-        <figure class="quote gold-card"><blockquote><p>“The breakfast was first-class, the hosts were welcoming and friendly.”</p></blockquote><figcaption>Guest from Düsseldorf · November 2026</figcaption></figure>
+        <figure class="quote"><blockquote><p>“The breakfast was first-class, the hosts were welcoming and friendly.”</p></blockquote><figcaption>Guest from Düsseldorf · November 2026</figcaption></figure>
         <figure class="quote"><blockquote lang="de"><p>„Würden euch jeder Zeit weiter empfehlen. Es waren schöne Tage, die wir sehr genossen haben.“</p></blockquote><figcaption>Guest from Dozwil · October 2026</figcaption></figure>
-        <figure class="quote gold-card"><blockquote lang="de"><p>„Wir vermissen euer Frühstück mit der tollen Auswahl und dem selbstgebackenen Brot. Und eure Herzlichkeit …“</p></blockquote><figcaption>Guest from Frenkendorf · September 2026</figcaption></figure>
+        <figure class="quote"><blockquote lang="de"><p>„Wir vermissen euer Frühstück mit der tollen Auswahl und dem selbstgebackenen Brot. Und eure Herzlichkeit …“</p></blockquote><figcaption>Guest from Frenkendorf · September 2026</figcaption></figure>
       </div>
       <div class="review-links">
         <a class="btn btn-outline" href="https://www.freetobook.com/reviews/all?w_id=1478&amp;w_tkn=JWlrshx8Y7AShqaNtBFe0gcc0CLm1dekXAfrtdNRgOWRZxnLzjyVqw43FyEsX" target="_blank" rel="noopener">Our direct reviews</a>
@@ -812,6 +829,6 @@
   </svg>
 </button>
 
-<script src="assets/site.js?v=15" defer></script>
+<script src="assets/site.js?v=16" defer></script>
 </body>
 </html>
