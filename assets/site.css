@@ -600,3 +600,10 @@ h2.strong { font-weight: 500; }
   .site-header .icon-btn { background: rgba(20, 22, 24, calc(.45 * (1 - var(--hb)))); }
   .hero-content { padding-top: 84px; }
 }
+
+/* Faktenleiste nach Adis Variante: ruhiges Band ohne Goldkacheln, feine Trennlinien, etwas grössere Schrift */
+.facts { background: var(--bg-alt); border-block: 1px solid var(--line); }
+.facts-list { padding-block: 26px; }
+.facts-list li { padding: 8px 12px; }
+.facts-list strong { font-size: 1.15rem; }
+.facts-list span { font-size: .95rem; }
