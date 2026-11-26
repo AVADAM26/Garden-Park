@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/hero-hosts-1600.webp" as="image" imagesrcset="img/hero-hosts-800.webp 800w, img/hero-hosts-1600.webp 1600w, img/hero-hosts-2200.webp 2200w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/site.css?v=48">
+<link rel="stylesheet" href="assets/site.css?v=49">
 <script>
   try { var t = localStorage.getItem('gp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -725,7 +725,7 @@
         <p class="eyebrow">FAQ</p>
         <h2 id="faq-title">Questions our Guests ask</h2>
       </div>
-      <div class="faq-list">
+      <div class="faq-list" id="faq-list">
         <details class="faq-item">
           <summary>Why is Grantown-on-Spey such a good base for exploring the Highlands?</summary>
           <div class="faq-a"><p>Grantown sits in the centre of multiple regions. Guests can easily make star-shaped day trips into Speyside, the Cairngorms, Moray Coast, Inverness area, Strathspey and Aberdeenshire. Many highlights are reachable within 20–50 minutes. Every day can offer completely different scenery and experiences. Fancy some ideas for your planning? Sarah and Daniel's <a href="grantown-map/?v=20261125d" target="_blank" rel="noopener">interactive map</a> could be a good help.</p></div>
@@ -734,35 +734,36 @@
           <summary>Can we walk to restaurants and shops?</summary>
           <div class="faq-a"><p>Yes. Garden Park is located in a quiet side street. The town centre is approximately 3 minutes away on foot. All restaurants can be reached within 1–10 minutes walking distance. Several are less than 4 minutes away.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item faq-extra">
           <summary>How far is Inverness from Grantown-on-Spey?</summary>
           <div class="faq-a"><p>Approximately 50 minutes by car. You can reach Inverness either via Nairn or via the A9. Public transport is also available, and <a href="grantown-map/?v=20261125d#travelSection" target="_blank" rel="noopener">regular buses</a> connect Grantown-on-Spey and Inverness.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item faq-extra">
           <summary>Do you offer vegan breakfast options?</summary>
           <div class="faq-a"><p>Yes. Fresh vegetarian and vegan options are available every day.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item faq-extra">
           <summary>Can we complete the Speyside Malt Whisky Trail in one day?</summary>
           <div class="faq-a"><p>Of course you can do the Speyside Malt Whisky Trail in one day. The real question is, will you remember it the next day? 😄 With so many distilleries, visitor centres and tastings, time flies. Our advice is to visit fewer distilleries and enjoy each one more. You will find them all on our <a href="grantown-map/?v=20261125d#distilleries" target="_blank" rel="noopener">Speyside Distilleries map</a>. Daniel also offers a driver service for up to 4 people on request. As dates fill up quickly, especially in peak season, booking at least 6 weeks in advance is recommended.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item faq-extra">
           <summary>Are dolphins really visible from the Moray coast?</summary>
           <div class="faq-a"><p>Yes, really, and they have never charged an entry fee! The best location is Chanonry Point near Fortrose, where Bottlenose Dolphins are regularly spotted, especially 1.5–2 hours after low tide. Bring binoculars and be patient, the reward is worth it.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item faq-extra">
           <summary>Where can I find the official government website to apply for a UK ETA?</summary>
           <div class="faq-a"><p>To avoid third-party scam sites or unnecessary extra processing fees, you should only apply through official UK government channels. You can apply online directly on the official UK government website at <a href="https://www.gov.uk/eta/apply" target="_blank" rel="noopener">gov.uk/eta/apply</a>, or use the official 'UK ETA' app (Apple App Store and Google Play Store), which lets you easily scan your passport's biometric chip and your face. Please note that the official UK ETA application costs £20. Always check that the website address ends exactly in .gov.uk, as independent websites often look identical to official government pages but charge large hidden fees on top of the standard rate.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item faq-extra">
           <summary>Where is the best whisky in Scotland?</summary>
           <div class="faq-a"><p>Who knows? That was not very funny, was it? 😉 The truth is nobody can answer that question. Scotland has more than 140 distilleries and everyone has different tastes. You may love a smoky island whisky or perhaps you are completely new to whisky. If so, Speyside is one of the best places to begin. Why not stay with us and explore more than 50 distilleries throughout Speyside and Strathspey? A wonderful adventure for whisky lovers and future whisky lovers alike. And if <a href="grantown-map/?v=20261125d#gin" target="_blank" rel="noopener">gin</a> is more your spirit, you are in luck, as the Cairngorms and the surrounding area are home to some excellent gins too.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item faq-extra">
           <summary>Gin in the Cairngorms and Speyside?</summary>
           <div class="faq-a"><p>Yes, the region produces excellent, internationally award-winning gin. Kinrara, for example, won “World's Best Signature Botanical” at the World Gin Awards 2025 with its Caper Artist Edition. Or there is Glenrinnes, with its modern distillery and 100% organic certification. And by the way, Kinrara are still on a roll in 2026, taking the title “World's Best Gin Design” at the World Drinks Awards in London.</p></div>
         </details>
       </div>
+      <p class="rooms-toggle-wrap"><button class="btn btn-outline faq-toggle" type="button" aria-expanded="false" aria-controls="faq-list" data-label-open="More questions and answers" data-label-close="Fewer questions and answers">More questions and answers</button></p>
       <p class="faq-more">More questions and answers in our <a href="grantown-map/?v=20261125d" target="_blank" rel="noopener">interactive map</a>.</p>
     </div>
   </section>
@@ -842,6 +843,6 @@
   </svg>
 </button>
 
-<script src="assets/site.js?v=19" defer></script>
+<script src="assets/site.js?v=20" defer></script>
 </body>
 </html>

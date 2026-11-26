@@ -629,3 +629,9 @@ h2.strong { font-weight: 500; }
   .rooms-strip li { flex: 0 0 calc(50% - 8px); text-align: center; }
 }
 .rooms-toggle { font-family: inherit; background: transparent; }
+
+/* FAQ kompakt: zwei Fragen sichtbar, "More questions and answers" zeigt alle (alles bleibt im HTML für Google und KIs) */
+.faq-list:not(.all) .faq-extra { display: none; }
+.faq-toggle { font-family: inherit; background: transparent; }
+#faq .rooms-toggle-wrap { margin-top: 28px; }
+.faq-list:not(.all) ~ .faq-more { display: none; }

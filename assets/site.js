@@ -266,3 +266,17 @@ document.querySelectorAll('.m-toggle').forEach(function (btn) {
   });
   if (/^#room-/.test(location.hash)) { set(true); var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView({ block: 'center' }); }
 })();
+
+// FAQ: weitere Fragen auf- und zuklappen
+(function () {
+  var list = document.getElementById('faq-list'), btn = document.querySelector('.faq-toggle');
+  if (!list || !btn) return;
+  btn.addEventListener('click', function () {
+    var open = !list.classList.contains('all');
+    list.classList.toggle('all', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = btn.getAttribute(open ? 'data-label-close' : 'data-label-open');
+    if (!open) document.getElementById('faq').scrollIntoView({ block: 'start' });
+  });
+  if (location.hash && list.querySelector(location.hash + '.faq-extra')) btn.click();
+})();
