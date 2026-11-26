@@ -42,6 +42,13 @@ Sprachen: Englisch (`index.html`) ist die Quelle. Im Menü zeigt die Sprachwahl 
 
 Messen von Anfang an: Google Analytics, Cookie-Banner (Termageddon, Consent Mode v2), Trichter Webseite → Karte → Buchung.
 
+## Beim Start (live) nicht vergessen
+
+- Google Search Console und Google Analytics (mit Consent Mode) erst einbauen, wenn die Seite live ist. Dann Sperre (`noindex`, `robots.txt`) entfernen und Sitemap einreichen.
+- Alle Links, die schon im Umlauf sind (Instagram, Facebook, YouTube, Cairngorms-Guide, Mails, Buchungsbestätigung, Butterfly-Seite usw.), mit Zusätzen (`?utm_source=…&utm_medium=…&utm_campaign=…`) versehen, damit Analytics zeigt, woher die Besucher kommen. Vorher mit Daniel eine Liste machen.
+- Alle QR-Codes müssen weiter funktionieren: die alten Adressen bleiben (`/`, `/de/`, `/grantown-map/`, `/privacy-policy/`, `/cookie-policy/`, Butterfly `/grantown/grantown-map.html`). Vor dem Umzug mit Daniel alle QR-Codes und ihre Ziele auflisten und nach dem Umzug jeden einmal scannen.
+- Erst nach dem Start: Italienisch prüft Daniel, Holländisch und Französisch lassen Muttersprachler gegenlesen, neue Fotos macht Adi in Schottland.
+
 ## Fakten (nichts davon ändern ohne Daniel)
 
 - Adresse: Garden Park, 2 Woodside Avenue, Grantown-on-Spey, PH26 3JN. Telefon +44 1479 873235. Mail relax@garden-park.co.uk.
