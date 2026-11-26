@@ -200,10 +200,20 @@ document.querySelectorAll('.m-toggle').forEach(function (btn) {
   if (g) {
     var imgs = g.querySelectorAll('img');
     g.classList.add('slide');
-    var gi = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('in'); });
-    }, { threshold: 0.15 });
-    imgs.forEach(function (im, i) { im.style.transitionDelay = (i % 3) * 0.12 + 's'; gi.observe(im); });
+    // Nicht mit IntersectionObserver: der Vorhang (clip-path) macht das Foto für ihn unsichtbar
+    imgs.forEach(function (im, i) { im.style.transitionDelay = (i % 3) * 0.25 + 's'; });
+    function reveal() {
+      var h = window.innerHeight;
+      imgs.forEach(function (im) {
+        if (im.classList.contains('in')) return;
+        var r = im.getBoundingClientRect();
+        if (r.height && r.top < h * 0.9 && r.bottom > 0) im.classList.add('in');
+      });
+    }
+    window.addEventListener('scroll', reveal, { passive: true });
+    window.addEventListener('resize', reveal);
+    document.addEventListener('click', function () { setTimeout(reveal, 60); });
+    reveal();
     whenAway(g, function () {
       imgs.forEach(function (im) { im.style.transition = 'none'; im.classList.remove('in'); });
       void g.offsetWidth;
