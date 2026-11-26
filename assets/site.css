@@ -587,3 +587,16 @@ h2.strong { font-weight: 500; }
 @media (max-width: 760px) { .contact-note { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--line); } }
 .score-big .score-num { font-size: inherit; margin: 0; color: transparent; font-weight: 600; }
 .score-bars dd b { font-weight: inherit; min-width: 2.2em; }
+
+/* Handy: oben verschmilzt die Menüleiste mit dem Foto, nur die drei Striche bleiben.
+   Beim Scrollen werden Leiste und Logo langsam eingeblendet (--hb von 0 bis 1, gesetzt im Skript) */
+@media (max-width: 760px) {
+  .site-header { --hb: 0; margin-bottom: -68px; background: color-mix(in srgb, var(--bar) calc(var(--hb) * 100%), transparent); box-shadow: 0 6px 20px rgba(0,0,0, calc(.25 * var(--hb))); transition: none; }
+  .site-header:has(.main-nav.open) { background: var(--bar); }
+  .site-header:has(.main-nav.open) .brand { opacity: 1; pointer-events: auto; }
+  .site-header:has(.main-nav.open) .icon-btn { background: none; }
+  .site-header .brand { opacity: var(--hb); }
+  .site-header:not(.scrolled) .brand { pointer-events: none; }
+  .site-header .icon-btn { background: rgba(20, 22, 24, calc(.45 * (1 - var(--hb)))); }
+  .hero-content { padding-top: 84px; }
+}

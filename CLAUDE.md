@@ -26,6 +26,7 @@ Pflicht in jedem Projekt: Hell/Dunkel-Modus, Geschwindigkeit immer mit Google Pa
 - Auf dem Handy sind Packages & news, die sechs Kacheln bei The area und die Galerie (zeigt nur das Haus bei Nacht) zum Aufklappen (`.m-collapsible` und `.m-toggle`). Am Computer ist alles offen.
 - Good to know ist eine kompakte Liste (Name und kurzer Wert), ein Klick zeigt rechts den Text mit grossem grünem Wert und Untertitel; am Anfang ist Opening times offen. Auf dem Handy öffnet sich der Text unter der Zeile.
 - Bewegung beim Scrollen: Galeriefotos werden von links eingeschoben, die 5 und die Balken bei den Bewertungen zählen von 0 hoch. Nur mit `translate`/`opacity`, damit nichts springt (CLS 0), und aus bei „reduzierte Bewegung“.
+- Handy: oben verschmilzt die Menüleiste mit dem Hero-Foto, nur die Knöpfe bleiben (runder dunkler Hintergrund). Beim Scrollen werden Leiste und kleines Logo in den ersten rund 90 px eingeblendet (`--hb` im Skript), bei offenem Menü ist die Leiste sofort voll da.
 - Kartenkachel bei The area ohne Kachel-Schatten, nur feiner Rahmen in der Farbe von „Open the map“. Getting here bei Kontakt ohne Kachel, mit feiner Linie.
 
 ## Technik

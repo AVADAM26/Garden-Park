@@ -36,7 +36,7 @@
   var ticking = false;
   function onScroll() {
     var y = window.scrollY;
-    if (header) header.classList.toggle('scrolled', y > 10);
+    if (header) { header.classList.toggle('scrolled', y > 10); header.style.setProperty('--hb', Math.min(1, Math.max(0, y / 90)).toFixed(3)); }
     if (toTop && !toTop.classList.contains('fly')) toTop.classList.toggle('show', y > 700);
     if (mobileBook) mobileBook.classList.toggle('show', y > 500);
     ticking = false;
