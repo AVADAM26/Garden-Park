@@ -179,30 +179,51 @@ document.querySelectorAll('.m-toggle').forEach(function (btn) {
   });
 })();
 
-// Galerie einschieben und Bewertungen hochzählen, nur wenn keine reduzierte Bewegung gewünscht ist
+// Galerie einschieben und Bewertungen hochzählen, nur wenn keine reduzierte Bewegung gewünscht ist.
+// Ist der Bereich länger als 3 Sekunden ausser Sicht, startet alles beim nächsten Mal frisch.
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var RESET_MS = 3000;
+  function visible(el) { var r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight; }
+  function whenAway(el, onReset) {
+    var timer = null;
+    function look() {
+      if (visible(el)) { clearTimeout(timer); timer = null; }
+      else if (!timer) { timer = setTimeout(function () { timer = null; if (!visible(el)) onReset(); }, RESET_MS); }
+    }
+    window.addEventListener('scroll', look, { passive: true });
+    look();
+  }
+
   var g = document.querySelector('.gallery');
   if (g) {
     var imgs = g.querySelectorAll('img');
     g.classList.add('slide');
     var gi = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); gi.unobserve(e.target); } });
+      entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('in'); });
     }, { threshold: 0.15 });
     imgs.forEach(function (im, i) { im.style.transitionDelay = (i % 3) * 0.12 + 's'; gi.observe(im); });
+    whenAway(g, function () {
+      imgs.forEach(function (im) { im.style.transition = 'none'; im.classList.remove('in'); });
+      void g.offsetWidth;
+      imgs.forEach(function (im) { im.style.transition = ''; });
+    });
   }
+
   var sc = document.querySelector('.score'); if (!sc) return;
   var nums = [];
   var big = sc.querySelector('.score-num'); if (big) nums.push(big);
   sc.querySelectorAll('.score-bars dd b').forEach(function (b) { nums.push(b); });
   var targets = nums.map(function (n) { return n.textContent; });
-  nums.forEach(function (n) { n.textContent = n.textContent.replace(/[0-9]/g, '0'); });
-  sc.classList.add('wait');
-  var started = false;
+  var started = false, raf = 0;
+  function zero() {
+    cancelAnimationFrame(raf);
+    nums.forEach(function (n, i) { n.textContent = targets[i].replace(/[0-9]/g, '0'); });
+    sc.classList.add('wait'); started = false;
+  }
   function start() {
     if (started) return; started = true;
-    window.removeEventListener('scroll', check);
     void sc.offsetWidth; sc.classList.remove('wait');
     var t0 = performance.now(), dur = 1600;
     (function step(t) {
@@ -212,10 +233,13 @@ document.querySelectorAll('.m-toggle').forEach(function (btn) {
         var val = parseFloat(txt.replace(',', '.')), dec = (txt.split(/[.,]/)[1] || '').length;
         n.textContent = k < 1 ? (val * e).toFixed(dec).replace('.', sep) : txt;
       });
-      if (k < 1) requestAnimationFrame(step);
+      if (k < 1) raf = requestAnimationFrame(step);
     })(t0);
   }
-  function check() { if (sc.getBoundingClientRect().top < window.innerHeight * 0.85) start(); }
+  function inView() { var r = sc.getBoundingClientRect(); return r.top < window.innerHeight * 0.85 && r.bottom > 0; }
+  function check() { if (!started && inView()) start(); }
+  zero();
   window.addEventListener('scroll', check, { passive: true });
   check();
+  whenAway(sc, zero);
 })();
