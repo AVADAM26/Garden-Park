@@ -211,7 +211,6 @@
  "Show packages &amp; news": "Aanbiedingen &amp; nieuws tonen",
  "Show all photos": "Alle foto's tonen",
  "Show less": "Minder tonen",
- "Show walks, whisky &amp; more": "Wandelen, whisky &amp; meer",
  "No surprises, no small print buried in a PDF. If anything here needs discussing, simply call or write to us.": "Geen verrassingen, geen kleine lettertjes verstopt in een pdf. Wilt u iets bespreken, bel of schrijf ons gerust.",
  "Check-in and check-out": "In- en uitchecken",
  "Check-in is between 4pm and 7pm, check-out by 10am. Each day you choose your breakfast and your preferred time on our breakfast card.": "Inchecken kan tussen 16 en 19 uur, uitchecken tot 10 uur. Elke dag kiest u uw ontbijt en het tijdstip op onze ontbijtkaart.",
@@ -309,5 +308,7 @@
  "More room details": "Meer over de kamers",
  "Fewer room details": "Minder over de kamers",
  "More questions and answers": "Meer vragen en antwoorden",
- "Fewer questions and answers": "Minder vragen en antwoorden"
+ "Fewer questions and answers": "Minder vragen en antwoorden",
+ "More about the area": "Meer over de regio",
+ "Less about the area": "Minder over de regio"
 }

@@ -211,7 +211,6 @@
  "Show packages &amp; news": "Voir les offres &amp; nouvelles",
  "Show all photos": "Voir toutes les photos",
  "Show less": "Voir moins",
- "Show walks, whisky &amp; more": "Balades, whisky &amp; plus",
  "No surprises, no small print buried in a PDF. If anything here needs discussing, simply call or write to us.": "Pas de surprises, pas de petites lignes cachées dans un PDF. S'il y a quelque chose à discuter, appelez-nous ou écrivez-nous simplement.",
  "Check-in and check-out": "Arrivée et départ",
  "Check-in is between 4pm and 7pm, check-out by 10am. Each day you choose your breakfast and your preferred time on our breakfast card.": "L'arrivée se fait entre 16 h et 19 h, le départ avant 10 h. Chaque jour, vous choisissez votre petit-déjeuner et l'heure sur notre carte du petit-déjeuner.",
@@ -309,5 +308,7 @@
  "More room details": "Plus de détails sur les chambres",
  "Fewer room details": "Moins de détails sur les chambres",
  "More questions and answers": "Plus de questions et réponses",
- "Fewer questions and answers": "Moins de questions et réponses"
+ "Fewer questions and answers": "Moins de questions et réponses",
+ "More about the area": "En savoir plus sur la région",
+ "Less about the area": "Moins sur la région"
 }
