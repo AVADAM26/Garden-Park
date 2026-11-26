@@ -649,3 +649,9 @@ h2.strong { font-weight: 500; }
 /* Social-Knöpfe: weisses Symbol braucht ein dunkleres Grün (Kontrast über 3:1, auch im dunklen Modus) */
 .social-btn, .social-footer .social-btn { background: #577217; }
 .social-btn:hover, .social-footer .social-btn:hover { background: #4a6113; }
+
+/* Motto bei den Gastgebern, öffnet sich wie die Galeriefotos */
+.host-motto { margin: 26px 0 22px; padding: 14px 0 14px 18px; border-left: 3px solid var(--green-brand); font-size: 1.2rem; line-height: 1.5; color: var(--text); font-style: italic; }
+.host-motto .heart { color: #c8413b; font-style: normal; margin-right: 4px; }
+.curtain.slide { clip-path: inset(0 100% 0 0); opacity: .4; transition: clip-path 1.6s cubic-bezier(.25,.6,.3,1), opacity 1.6s ease; }
+.curtain.slide.in { clip-path: inset(0 0 0 0); opacity: 1; }

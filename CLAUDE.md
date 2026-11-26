@@ -30,6 +30,7 @@ Pflicht in jedem Projekt: Hell/Dunkel-Modus, Geschwindigkeit immer mit Google Pa
 - Handy: oben verschmilzt die Menüleiste mit dem Hero-Foto, nur die Knöpfe bleiben (runder dunkler Hintergrund). Beim Scrollen werden Leiste und kleines Logo in den ersten rund 90 px eingeblendet (`--hb` im Skript), bei offenem Menü ist die Leiste sofort voll da.
 - Zimmer kompakt (Idee von Adi): oben eine Reihe mit 6 Zimmern und Butterfly Cottage (Foto, Kategorie, Name). „More room details“ klappt die ausführlichen Zimmerkarten, den Preishinweis und die Butterfly-Karte auf; ein Klick auf ein Zimmer öffnet direkt bei diesem Zimmer. Auf dem Handy zweispaltig und mittig.
 - FAQ kompakt: zwei Fragen sichtbar, „More questions and answers“ zeigt alle zehn und den Hinweis auf die Karte („Fewer questions and answers“ klappt zu). Alle Fragen bleiben im HTML und in den FAQ-Daten für Google.
+- Motto von Sarah und Daniel bei Your hosts (auch in den Broschüren von Landmark Press): „Hosting, the only job where the whole world comes to visit you. We simply love it.“ mit rotem Herz und grüner Linie, öffnet sich wie die Galeriefotos (Klasse `curtain`). Übersetzungen von Daniel in i18n. In allen künftigen Videos ploppt der Satz am Ende auf Englisch mit Herz und goldenem Rahmen auf.
 - Kartenkachel bei The area ohne Kachel-Schatten, nur feiner Rahmen in der Farbe von „Open the map“. Getting here bei Kontakt ohne Kachel, mit feiner Linie.
 
 ## Technik

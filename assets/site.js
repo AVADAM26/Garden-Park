@@ -221,6 +221,14 @@ document.querySelectorAll('.m-toggle').forEach(function (btn) {
     });
   }
 
+  // Weitere Elemente mit demselben Vorhang (z. B. das Motto bei den Gastgebern)
+  document.querySelectorAll('.curtain').forEach(function (el) {
+    el.classList.add('slide');
+    function look() { var r = el.getBoundingClientRect(); if (!el.classList.contains('in') && r.height && r.top < window.innerHeight * 0.9 && r.bottom > 0) el.classList.add('in'); }
+    window.addEventListener('scroll', look, { passive: true }); look();
+    whenAway(el, function () { el.style.transition = 'none'; el.classList.remove('in'); void el.offsetWidth; el.style.transition = ''; });
+  });
+
   var sc = document.querySelector('.score'); if (!sc) return;
   var nums = [];
   var big = sc.querySelector('.score-num'); if (big) nums.push(big);
