@@ -67,7 +67,7 @@ Instagram https://www.instagram.com/gardenpark1868 · Facebook https://www.faceb
 ## Regeln
 
 - **Nichts erfinden.** Keine Preise, Angaben oder Bewertungen, die nicht von Daniel oder Sarah kommen. Fehlendes als Platzhalter in eckigen Klammern.
-- **Texte:** bestehende Texte übernehmen und nur glätten, nicht neu erfinden, kein Werbe-Englisch. Britisches Englisch. „Guest/Guests“ bewusst gross. Deutsch in Schweizer Schreibweise, immer „ss“, nie „ß“.
+- **Texte:** bestehende Texte übernehmen und nur glätten, nicht neu erfinden, kein Werbe-Englisch. Britisches Englisch. „Guest/Guests“ im Englischen bewusst gross; in IT, NL und FR mitten im Satz klein (ospiti, gasten, hôtes), wie es dort korrekt ist (Entscheid Daniel 27.11.). Italienisch ab 27.11. nach Tante Lidias Fassung (Begrüssung bis Angebote), Rest noch alt. Deutsch in Schweizer Schreibweise, immer „ss“, nie „ß“.
 - Jede Änderung auf dem Handy und am Computer, hell und dunkel prüfen. Nichts darf seitlich überstehen.
 - Vor dem Arbeiten `git pull`, kleine Commits mit deutscher Beschreibung.
 - **Commits immer im Namen der Person, die gerade arbeitet**, nie nur als „claude“. Vor dem ersten Commit `git config user.name` und `git config user.email` im Repo setzen. Ist unklar, wer arbeitet, kurz fragen.
