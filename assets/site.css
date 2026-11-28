@@ -657,3 +657,6 @@ h2.strong { font-weight: 500; }
 .curtain.slide.in { clip-path: inset(0 0 0 0); opacity: 1; }
 /* Lange Kategorienamen (z. B. NL „Tweepersoonskamer“) nicht in die Nachbarspalte laufen lassen */
 .rooms-strip .room-cat, .room-card .room-cat { overflow-wrap: anywhere; hyphens: auto; letter-spacing: .08em; }
+
+/* Schweizer Fahne ist quadratisch */
+.nav-lang .flag-sq { width: 14px; margin: 0 3.5px; }

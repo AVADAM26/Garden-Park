@@ -1,0 +1,15 @@
+{
+ "_info": "Nur für /de/ (Deutschland, Österreich): diese Wörter bekommen ein ß. /de-ch/ bleibt mit ss. Neue Wörter mit ss hier eintragen, entweder unter ss_zu_sz oder unter bleibt.",
+ "ss_zu_sz": {
+  "Fuss": "Fuß", "Fusse": "Fuße", "Fussweg": "Fußweg",
+  "Geniessen": "Genießen", "geniessen": "genießen",
+  "Grosse": "Große", "grosse": "große", "grossen": "großen", "Grosseltern": "Großeltern", "grossartigen": "großartigen", "grössten": "größten",
+  "Strasse": "Straße", "Seitenstrasse": "Seitenstraße", "Strassenfest": "Straßenfest", "Strassenhöhe": "Straßenhöhe",
+  "abschliessbaren": "abschließbaren", "abschliessbarer": "abschließbarer", "schliessen": "schließen",
+  "ausserdem": "außerdem", "ausserhalb": "außerhalb",
+  "begrüssen": "begrüßen", "gleichermassen": "gleichermaßen",
+  "heissen": "heißen", "weiss": "weiß",
+  "regelmässig": "regelmäßig", "regelmässige": "regelmäßige"
+ },
+ "bleibt": ["Abendessen", "Anlass", "Ausschlafen", "Ausstattung", "Betrugsseiten", "Busse", "Düsseldorf", "Erdgeschoss", "Erlebnisse", "Espresso", "Essen", "Gruppenanlässe", "Inverness", "Kingussie", "Kommission", "Obergeschoss", "Reisepasses", "Schlösser", "Wasser", "Wassertanks", "Webadresse", "Whiskyfässern", "Wildwasser", "Wohlfühlessen", "bisschen", "dass", "geschlossen", "lassen", "lässt", "müssen", "unvergesslicher", "wissen"]
+}
